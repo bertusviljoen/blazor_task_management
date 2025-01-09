@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "ltNUgjZg7580LJv/YIlrb+0YmiSXpE+sVnkVpICM+K4=",
+  "Source": "task-management.ApiService",
+  "BasePath": "_content/task-management.ApiService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

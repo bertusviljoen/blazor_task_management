@@ -1,0 +1,31 @@
+@inject NavigationManager Navigation
+
+<FluentStack Orientation="Orientation.Vertical" Class="chat-panel">
+    <FluentButton Appearance="Appearance.Stealth" @onclick="ToggleChat">
+        <FluentIcon Value="@(new Icons.Regular.Size24.Chat())" />
+    </FluentButton>
+
+    @if (isOpen)
+    {
+        <FluentStack Orientation="Orientation.Vertical" Class="chat-content">
+            <FluentTextField @bind-Value="message" Placeholder="Type a message..." />
+            <FluentButton Appearance="Appearance.Accent" @onclick="SendMessage">Send</FluentButton>
+        </FluentStack>
+    }
+</FluentStack>
+
+@code {
+    private bool isOpen = true;
+    private string message = string.Empty;
+
+    private void ToggleChat()
+    {
+        isOpen = !isOpen;
+    }
+
+    private void SendMessage()
+    {
+        // TODO: Implement message sending
+        message = string.Empty;
+    }
+}
