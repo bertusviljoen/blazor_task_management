@@ -16,6 +16,9 @@
 # Rider/IntelliJ IDEA files
 .idea/
 *.iml
+.idea/.idea.task-management/.idea/indexLayout.xml
+.idea/.idea.task-management/.idea/projectSettingsUpdater.xml
+.idea/.idea.task-management/.idea/workspace.xml
 
 # Mac OS files
 .DS_Store
@@ -35,6 +38,12 @@
 # Local development files
 appsettings.Development.json
 launchSettings.json
+task-management.ApiService/appsettings.Development.json
+task-management.ApiService/Properties/launchSettings.json
+task-management.AppHost/appsettings.Development.json
+task-management.AppHost/Properties/launchSettings.json
+task-management.Web/appsettings.Development.json
+task-management.Web/Properties/launchSettings.json
 
 # Compiled files
 *.dll
