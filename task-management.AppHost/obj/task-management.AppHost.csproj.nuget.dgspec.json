@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "x:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.AppHost\\task-management.AppHost.csproj": {}
+    "X:\\ASource\\Github\\blazor_task_management\\task-management.AppHost\\task-management.AppHost.csproj": {}
   },
   "projects": {
-    "x:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.AppHost\\task-management.AppHost.csproj": {
+    "X:\\ASource\\Github\\blazor_task_management\\task-management.AppHost\\task-management.AppHost.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "x:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.AppHost\\task-management.AppHost.csproj",
+        "projectUniqueName": "X:\\ASource\\Github\\blazor_task_management\\task-management.AppHost\\task-management.AppHost.csproj",
         "projectName": "task-management.AppHost",
-        "projectPath": "x:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.AppHost\\task-management.AppHost.csproj",
+        "projectPath": "X:\\ASource\\Github\\blazor_task_management\\task-management.AppHost\\task-management.AppHost.csproj",
         "packagesPath": "X:\\packages\\NuGet\\cache",
-        "outputPath": "x:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.AppHost\\obj\\",
+        "outputPath": "X:\\ASource\\Github\\blazor_task_management\\task-management.AppHost\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

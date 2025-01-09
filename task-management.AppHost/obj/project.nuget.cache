@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Dvhq7P4B4nA=",
+  "dgSpecHash": "cyonA8ZKca0=",
   "success": true,
-  "projectFilePath": "x:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.AppHost\\task-management.AppHost.csproj",
+  "projectFilePath": "X:\\ASource\\Github\\blazor_task_management\\task-management.AppHost\\task-management.AppHost.csproj",
   "expectedPackageFiles": [
     "X:\\packages\\NuGet\\cache\\aspire.dashboard.sdk.win-x64\\9.0.0\\aspire.dashboard.sdk.win-x64.9.0.0.nupkg.sha512",
     "X:\\packages\\NuGet\\cache\\aspire.hosting\\9.0.0\\aspire.hosting.9.0.0.nupkg.sha512",

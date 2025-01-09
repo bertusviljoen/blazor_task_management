@@ -7,5 +7,5 @@ namespace Projects;
 [global::System.Diagnostics.DebuggerDisplay("Type = {GetType().Name,nq}, ProjectPath = {ProjectPath}")]
 public class task_management_Web : global::Aspire.Hosting.IProjectMetadata
 {
-    public string ProjectPath => """x:\ASource\Local\blazor\fluentui\task-management\task-management.Web\task-management.Web.csproj""";
+    public string ProjectPath => """X:\ASource\Github\blazor_task_management\task-management.Web\task-management.Web.csproj""";
 }

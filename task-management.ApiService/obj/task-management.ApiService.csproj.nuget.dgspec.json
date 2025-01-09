@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "x:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.ApiService\\task-management.ApiService.csproj": {}
+    "X:\\ASource\\Github\\blazor_task_management\\task-management.ApiService\\task-management.ApiService.csproj": {}
   },
   "projects": {
-    "x:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.ApiService\\task-management.ApiService.csproj": {
+    "X:\\ASource\\Github\\blazor_task_management\\task-management.ApiService\\task-management.ApiService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "x:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.ApiService\\task-management.ApiService.csproj",
+        "projectUniqueName": "X:\\ASource\\Github\\blazor_task_management\\task-management.ApiService\\task-management.ApiService.csproj",
         "projectName": "task-management.ApiService",
-        "projectPath": "x:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.ApiService\\task-management.ApiService.csproj",
+        "projectPath": "X:\\ASource\\Github\\blazor_task_management\\task-management.ApiService\\task-management.ApiService.csproj",
         "packagesPath": "X:\\packages\\NuGet\\cache",
-        "outputPath": "x:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.ApiService\\obj\\",
+        "outputPath": "X:\\ASource\\Github\\blazor_task_management\\task-management.ApiService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -34,8 +34,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "x:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.ServiceDefaults\\task-management.ServiceDefaults.csproj": {
-                "projectPath": "x:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.ServiceDefaults\\task-management.ServiceDefaults.csproj"
+              "X:\\ASource\\Github\\blazor_task_management\\task-management.ServiceDefaults\\task-management.ServiceDefaults.csproj": {
+                "projectPath": "X:\\ASource\\Github\\blazor_task_management\\task-management.ServiceDefaults\\task-management.ServiceDefaults.csproj"
               }
             }
           }
@@ -84,14 +84,14 @@
         }
       }
     },
-    "x:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.ServiceDefaults\\task-management.ServiceDefaults.csproj": {
+    "X:\\ASource\\Github\\blazor_task_management\\task-management.ServiceDefaults\\task-management.ServiceDefaults.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "x:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.ServiceDefaults\\task-management.ServiceDefaults.csproj",
+        "projectUniqueName": "X:\\ASource\\Github\\blazor_task_management\\task-management.ServiceDefaults\\task-management.ServiceDefaults.csproj",
         "projectName": "task-management.ServiceDefaults",
-        "projectPath": "x:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.ServiceDefaults\\task-management.ServiceDefaults.csproj",
+        "projectPath": "X:\\ASource\\Github\\blazor_task_management\\task-management.ServiceDefaults\\task-management.ServiceDefaults.csproj",
         "packagesPath": "X:\\packages\\NuGet\\cache",
-        "outputPath": "x:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.ServiceDefaults\\obj\\",
+        "outputPath": "X:\\ASource\\Github\\blazor_task_management\\task-management.ServiceDefaults\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

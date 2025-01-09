@@ -8,5 +8,5 @@ namespace Projects;
 public class task_management_AppHost
 {
     private task_management_AppHost() { }
-    public static string ProjectPath => """x:\ASource\Local\blazor\fluentui\task-management\task-management.AppHost""";
+    public static string ProjectPath => """X:\ASource\Github\blazor_task_management\task-management.AppHost""";
 }

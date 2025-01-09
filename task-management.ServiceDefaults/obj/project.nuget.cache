@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bdLqTgl9vvE=",
+  "dgSpecHash": "vOG9Z25amsc=",
   "success": true,
-  "projectFilePath": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.ServiceDefaults\\task-management.ServiceDefaults.csproj",
+  "projectFilePath": "X:\\ASource\\Github\\blazor_task_management\\task-management.ServiceDefaults\\task-management.ServiceDefaults.csproj",
   "expectedPackageFiles": [
     "X:\\packages\\NuGet\\cache\\google.protobuf\\3.22.5\\google.protobuf.3.22.5.nupkg.sha512",
     "X:\\packages\\NuGet\\cache\\grpc.core.api\\2.52.0\\grpc.core.api.2.52.0.nupkg.sha512",
