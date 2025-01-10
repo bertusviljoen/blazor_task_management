@@ -1,13 +1,13 @@
 
 using Microsoft.Extensions.Hosting;
 using Scalar.AspNetCore;
+using System.Text.Json;
+using Microsoft.AspNetCore.Http.Json;
+using task_management.ApiService.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.AddCosmosDbContext<DataContext>(
-    databaseName: "task-management",
-    connectionName: "cosmosdb"
-);
+builder.AddAzureCosmosClient("cosmos-db");
 
 // Add service defaults & Aspire client integrations.
 builder.AddServiceDefaults();
@@ -15,8 +15,17 @@ builder.AddServiceDefaults();
 // Add services to the container.
 builder.Services.AddProblemDetails();
 
+// Configure JSON serialization to use camelCase
+builder.Services.Configure<JsonOptions>(options =>
+{
+    options.SerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
+});
+
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+
+builder.Services.AddHostedService<DatabaseInitializer>();
 
 var app = builder.Build();
 
@@ -33,8 +42,7 @@ if (app.Environment.IsDevelopment())
         options.WithTitle("Web.Api");
         options.WithTheme(ScalarTheme.BluePlanet);
         options.WithSidebar(true);
-        //get server from applicationUrl
-        options.AddServer(new ScalarServer(applicationUrl, "Web.Api"));
+        options.AddServer(new ScalarServer(applicationUrl!, "Web.Api"));
     });
 }
 
@@ -56,7 +64,7 @@ app.MapGet("/weatherforecast", () =>
 
 app.MapDefaultEndpoints();
 
-app.MapProjectEndpoints();
+//app.MapProjectEndpoints();
 
 app.Run();
 

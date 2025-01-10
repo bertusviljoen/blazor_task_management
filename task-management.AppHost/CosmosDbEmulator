@@ -1,0 +1,13 @@
+# Use the official Azure Cosmos DB Emulator image
+FROM mcr.microsoft.com/cosmosdb/windows/azure-cosmos-emulator
+
+# Set environment variables
+ENV AZURE_COSMOS_EMULATOR_PARTITION_COUNT=10
+ENV AZURE_COSMOS_EMULATOR_ENABLE_DATA_PERSISTENCE=true
+
+# Expose necessary ports
+EXPOSE 8081
+EXPOSE 10250-10255
+
+# Entry point
+CMD ["C:\\CosmosDB.Emulator\\Microsoft.Azure.Cosmos.Emulator.exe"]

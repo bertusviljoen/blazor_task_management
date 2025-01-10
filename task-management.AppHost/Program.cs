@@ -1,11 +1,16 @@
 var builder = DistributedApplication.CreateBuilder(args);
 
-var cosmos = builder.AddAzureCosmosDB("cosmos-db")
+var cosmos =
+        builder.AddAzureCosmosDB("cosmos-db")
+                    .AddDatabase("task-management-db")
                     .RunAsEmulator(emulator =>
                     {
+                        emulator.WithLifetime(ContainerLifetime.Persistent);
                         emulator.WithGatewayPort(7777);
-                    })
-                    ;
+                        emulator.WithDataVolume();
+                        emulator.WithPartitionCount(100);
+                    });
+;
 
 var apiService = builder.AddProject<Projects.task_management_ApiService>("apiservice")
         .WithReference(cosmos)

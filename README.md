@@ -62,3 +62,18 @@ The project structure includes the following main components:
 
 6. **Open the application**:
    Open your browser and navigate to `https://localhost:17138` or `http://localhost:15156` to access the application.
+
+7. Import cosmos certificate
+
+   ```sh
+   curl --insecure <https://localhost:7777/_explorer/emulator.pem> > .emulatorcert.crt
+   ```
+8. Trust the certificate
+
+   ```sh
+   Import-Certificate -FilePath .emulatorcert.crt -CertStoreLocation 'Cert:\CurrentUser\Root'
+   ```
+
+   Note that a confirmation dialog will appear. Click Yes to trust the certificate.
+
+9. You can now access the emulator explorer at:    https://localhost:7777/_explorer/index.html
