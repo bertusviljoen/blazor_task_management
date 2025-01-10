@@ -2,6 +2,10 @@
 [Bb]in/
 [Oo]bj/
 
+# Ignore build directories
+**/bin/
+**/obj/
+
 # User-specific files
 *.rsuser
 *.suo
