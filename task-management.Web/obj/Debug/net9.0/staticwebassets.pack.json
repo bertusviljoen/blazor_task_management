@@ -1,14 +1,6 @@
 {
   "Files": [
     {
-      "Id": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\wwwroot\\app.css",
-      "PackagePath": "staticwebassets\\app.css"
-    },
-    {
-      "Id": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\wwwroot\\favicon.ico",
-      "PackagePath": "staticwebassets\\favicon.ico"
-    },
-    {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.task-management.Web.props",
       "PackagePath": "build\\task-management.Web.props"
     },
@@ -27,6 +19,14 @@
     {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.task-management.Web.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
     }
   ],
   "ElementsToRemove": []

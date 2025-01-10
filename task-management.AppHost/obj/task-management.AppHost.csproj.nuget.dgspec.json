@@ -61,6 +61,10 @@
               "target": "Package",
               "version": "[9.0.0, )"
             },
+            "Aspire.Hosting.Azure.CosmosDB": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
             "Aspire.Hosting.Orchestration.win-x64": {
               "target": "Package",
               "version": "[9.0.0, )",

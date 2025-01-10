@@ -21,7 +21,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("task-management.AppHost")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+daefe316c970f7b6dc553f56d5cc7427ea6851b2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+053277356a7e3b2cd8c2dd8e9633d89dde5b57b8")]
 [assembly: System.Reflection.AssemblyProductAttribute("task-management.AppHost")]
 [assembly: System.Reflection.AssemblyTitleAttribute("task-management.AppHost")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

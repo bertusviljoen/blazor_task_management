@@ -1,4 +1,13 @@
+
+using Microsoft.Extensions.Hosting;
+using Scalar.AspNetCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.AddCosmosDbContext<DataContext>(
+    databaseName: "task-management",
+    connectionName: "cosmosdb"
+);
 
 // Add service defaults & Aspire client integrations.
 builder.AddServiceDefaults();
@@ -16,7 +25,17 @@ app.UseExceptionHandler();
 
 if (app.Environment.IsDevelopment())
 {
+    var applicationUrl = app.Configuration["ApplicationUrl"];
+
     app.MapOpenApi();
+    app.MapScalarApiReference(options =>
+    {
+        options.WithTitle("Web.Api");
+        options.WithTheme(ScalarTheme.BluePlanet);
+        options.WithSidebar(true);
+        //get server from applicationUrl
+        options.AddServer(new ScalarServer(applicationUrl, "Web.Api"));
+    });
 }
 
 string[] summaries = ["Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"];
@@ -36,6 +55,8 @@ app.MapGet("/weatherforecast", () =>
 .WithName("GetWeatherForecast");
 
 app.MapDefaultEndpoints();
+
+app.MapProjectEndpoints();
 
 app.Run();
 

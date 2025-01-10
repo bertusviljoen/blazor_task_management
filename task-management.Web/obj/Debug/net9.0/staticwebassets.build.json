@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XKWxuNzPrroFCdh7G/aexMBuwEq17hfDSs0qIZbSM0Q=",
+  "Hash": "eEfeKYeE0+GPbUn0P+BLdsrIHmLqOb54SMnVHQVPFn4=",
   "Source": "task-management.Web",
   "BasePath": "_content/task-management.Web",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "task-management.Web\\wwwroot",
       "Source": "task-management.Web",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\wwwroot\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\wwwroot\\",
       "BasePath": "_content/task-management.Web",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\271piowt2t-62qhu097vx.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\271piowt2t-62qhu097vx.gz",
       "SourceId": "task-management.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/task-management.Web",
       "RelativePath": "app#[.{fingerprint=62qhu097vx}]?.css.gz",
       "AssetKind": "All",
@@ -28,20 +28,20 @@
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\wwwroot\\app.css",
+      "RelatedAsset": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\wwwroot\\app.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
       "Fingerprint": "cvpd3vz9x6",
       "Integrity": "OPMI2igLRnFUPWI24Ukhzwg+ygSUlFzGdBXJj3SqgWc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\wwwroot\\app.css"
+      "OriginalItemSpec": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\wwwroot\\app.css"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\2b4v2q74ar-0b0bj86z40.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\2b4v2q74ar-0b0bj86z40.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "Components/Slider/FluentSlider.razor.js.gz",
       "AssetKind": "All",
@@ -59,10 +59,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\Components\\Slider\\FluentSlider.razor.js"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\3emkb5z5ma-8j22j5h3b2.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\3emkb5z5ma-8j22j5h3b2.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "Microsoft.FluentUI.AspNetCore.Components.lib.module.js.map.gz",
       "AssetKind": "All",
@@ -80,10 +80,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\Microsoft.FluentUI.AspNetCore.Components.lib.module.js.map"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\4jvn6qpxj5-vyjqmndgy2.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\4jvn6qpxj5-vyjqmndgy2.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "Components/DesignSystemProvider/FluentDesignTheme.razor.js.gz",
       "AssetKind": "All",
@@ -101,10 +101,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\Components\\DesignSystemProvider\\FluentDesignTheme.razor.js"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\4sjayj892b-9fmja7pljs.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\4sjayj892b-9fmja7pljs.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "Components/NavMenu/FluentNavMenu.razor.js.gz",
       "AssetKind": "All",
@@ -122,10 +122,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\Components\\NavMenu\\FluentNavMenu.razor.js"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\5dcvuemm5a-s9hcthfn4x.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\5dcvuemm5a-s9hcthfn4x.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "Components/Splitter/FluentMultiSplitter.razor.js.gz",
       "AssetKind": "All",
@@ -143,10 +143,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\Components\\Splitter\\FluentMultiSplitter.razor.js"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\5eye7ha8pe-e5lgg05xwp.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\5eye7ha8pe-e5lgg05xwp.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "Components/Slider/FluentSliderLabel.razor.js.gz",
       "AssetKind": "All",
@@ -164,10 +164,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\Components\\Slider\\FluentSliderLabel.razor.js"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\6mwvvlkmgj-hi1gwvth64.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\6mwvvlkmgj-hi1gwvth64.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "Components/Grid/FluentGrid.razor.js.gz",
       "AssetKind": "All",
@@ -185,10 +185,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\Components\\Grid\\FluentGrid.razor.js"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\6nn42apl8y-1dlotxxwer.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\6nn42apl8y-1dlotxxwer.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "css/reboot.css.gz",
       "AssetKind": "All",
@@ -206,10 +206,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\css\\reboot.css"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\6o9gthdpke-psptt994gq.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\6o9gthdpke-psptt994gq.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "Components/List/FluentAutocomplete.razor.js.gz",
       "AssetKind": "All",
@@ -227,10 +227,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\Components\\List\\FluentAutocomplete.razor.js"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\7g337ulk4n-iy34mpf72d.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\7g337ulk4n-iy34mpf72d.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "Components/Divider/FluentDivider.razor.js.gz",
       "AssetKind": "All",
@@ -248,10 +248,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\Components\\Divider\\FluentDivider.razor.js"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\akzl5bxou0-p6kf5zqzit.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\akzl5bxou0-p6kf5zqzit.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "Components/Button/FluentButton.razor.js.gz",
       "AssetKind": "All",
@@ -269,10 +269,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\Components\\Button\\FluentButton.razor.js"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\bw0u5a3nbj-uhfllo7vmv.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\bw0u5a3nbj-uhfllo7vmv.gz",
       "SourceId": "task-management.Web",
       "SourceType": "Computed",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/task-management.Web",
       "RelativePath": "task-management.Web.modules.json.gz",
       "AssetKind": "Build",
@@ -280,20 +280,20 @@
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\jsmodules\\jsmodules.build.manifest.json",
+      "RelatedAsset": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\jsmodules\\jsmodules.build.manifest.json",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
       "Fingerprint": "wvxjj87u8r",
       "Integrity": "tMpc4Mp5Kart9mS3UELWfInMDPFZYORmj0wiAw7JwBs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\jsmodules\\jsmodules.build.manifest.json"
+      "OriginalItemSpec": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\jsmodules\\jsmodules.build.manifest.json"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\cdrmjjq1d6-dpoev2zj9b.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\cdrmjjq1d6-dpoev2zj9b.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "Components/Anchor/FluentAnchor.razor.js.gz",
       "AssetKind": "All",
@@ -311,10 +311,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\Components\\Anchor\\FluentAnchor.razor.js"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\cq4bmj8gmb-zjzit57lox.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\cq4bmj8gmb-zjzit57lox.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "Components/Checkbox/FluentCheckbox.razor.js.gz",
       "AssetKind": "All",
@@ -332,10 +332,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\Components\\Checkbox\\FluentCheckbox.razor.js"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\ffdjjohsnc-mmp1yy7un5.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\ffdjjohsnc-mmp1yy7un5.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "Components/List/ListComponentBase.razor.js.gz",
       "AssetKind": "All",
@@ -353,10 +353,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\Components\\List\\ListComponentBase.razor.js"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\fiqznfocyn-ki10xp5gks.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\fiqznfocyn-ki10xp5gks.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "Components/SortableList/FluentSortableList.razor.js.gz",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\Components\\SortableList\\FluentSortableList.razor.js"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\h0qxm5u0yy-vjluklws0l.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\h0qxm5u0yy-vjluklws0l.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "Components/InputFile/FluentInputFile.razor.js.gz",
       "AssetKind": "All",
@@ -395,10 +395,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\Components\\InputFile\\FluentInputFile.razor.js"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\ijuf810ucb-xp2f0e0rh3.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\ijuf810ucb-xp2f0e0rh3.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "Components/Label/FluentInputLabel.razor.js.gz",
       "AssetKind": "All",
@@ -416,10 +416,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\Components\\Label\\FluentInputLabel.razor.js"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\is0nail857-b0dyrub9as.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\is0nail857-b0dyrub9as.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "Components/Tooltip/FluentTooltip.razor.js.gz",
       "AssetKind": "All",
@@ -437,10 +437,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\Components\\Tooltip\\FluentTooltip.razor.js"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\jq2jihf5fr-awzanx0pu8.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\jq2jihf5fr-awzanx0pu8.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "Components/PullToRefresh/FluentPullToRefresh.razor.js.gz",
       "AssetKind": "All",
@@ -458,10 +458,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\Components\\PullToRefresh\\FluentPullToRefresh.razor.js"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\klh9ieqob8-lkb3k16ltm.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\klh9ieqob8-lkb3k16ltm.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "Components/DataGrid/FluentDataGrid.razor.js.gz",
       "AssetKind": "All",
@@ -479,10 +479,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\Components\\DataGrid\\FluentDataGrid.razor.js"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\kwrall9b0s-y92cxfqtgl.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\kwrall9b0s-y92cxfqtgl.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "Microsoft.FluentUI.AspNetCore.Components.lib.module.js.gz",
       "AssetKind": "All",
@@ -500,10 +500,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\Microsoft.FluentUI.AspNetCore.Components.lib.module.js"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\m1yjzwotev-f8c5bd5212.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\m1yjzwotev-f8c5bd5212.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "js/initializersLoader.webview.js.gz",
       "AssetKind": "All",
@@ -521,10 +521,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\js\\initializersLoader.webview.js"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\m3ffqup1h6-kz8gc8cxma.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\m3ffqup1h6-kz8gc8cxma.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "Microsoft.FluentUI.AspNetCore.Components.lib.module.js.LEGAL.txt.gz",
       "AssetKind": "All",
@@ -542,10 +542,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\Microsoft.FluentUI.AspNetCore.Components.lib.module.js.LEGAL.txt"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\mm8wr5jb95-rgycuwl3sw.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\mm8wr5jb95-rgycuwl3sw.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "Components/Overflow/FluentOverflow.razor.js.gz",
       "AssetKind": "All",
@@ -563,10 +563,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\Components\\Overflow\\FluentOverflow.razor.js"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\pfc9to5k3q-5pcucyxosc.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\pfc9to5k3q-5pcucyxosc.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "Components/HorizontalScroll/FluentHorizontalScroll.razor.js.gz",
       "AssetKind": "All",
@@ -584,10 +584,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\Components\\HorizontalScroll\\FluentHorizontalScroll.razor.js"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\pn46o4hdgm-5wrroj4j54.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\pn46o4hdgm-5wrroj4j54.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "Components/Menu/FluentMenu.razor.js.gz",
       "AssetKind": "All",
@@ -605,10 +605,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\Components\\Menu\\FluentMenu.razor.js"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\ruk4ibgzyp-t5s4sbrbsi.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\ruk4ibgzyp-t5s4sbrbsi.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "js/loading-theme.js.gz",
       "AssetKind": "All",
@@ -626,10 +626,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\js\\loading-theme.js"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\sbcuig79xm-uxxx5b63uj.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\sbcuig79xm-uxxx5b63uj.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "Components/TextField/FluentTextField.razor.js.gz",
       "AssetKind": "All",
@@ -647,10 +647,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\Components\\TextField\\FluentTextField.razor.js"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\sc7iw8bo2n-idf8r2y2gj.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\sc7iw8bo2n-idf8r2y2gj.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "Components/Tabs/FluentTab.razor.js.gz",
       "AssetKind": "All",
@@ -668,10 +668,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\Components\\Tabs\\FluentTab.razor.js"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\tb98bamshq-g9dxtzlran.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\tb98bamshq-g9dxtzlran.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "Components/List/FluentCombobox.razor.js.gz",
       "AssetKind": "All",
@@ -689,10 +689,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\Components\\List\\FluentCombobox.razor.js"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\twd6d0wh4o-819w3ybe2d.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\twd6d0wh4o-819w3ybe2d.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "Components/AnchoredRegion/FluentAnchoredRegion.razor.js.gz",
       "AssetKind": "All",
@@ -710,10 +710,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\Components\\AnchoredRegion\\FluentAnchoredRegion.razor.js"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\uslingtyva-rkj8st4k2x.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\uslingtyva-rkj8st4k2x.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "Components/Search/FluentSearch.razor.js.gz",
       "AssetKind": "All",
@@ -731,10 +731,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\Components\\Search\\FluentSearch.razor.js"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\win2gt64sq-pu9hn1jugj.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\win2gt64sq-pu9hn1jugj.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "Components/KeyCode/FluentKeyCode.razor.js.gz",
       "AssetKind": "All",
@@ -752,10 +752,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\Components\\KeyCode\\FluentKeyCode.razor.js"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\wmgko3ir4p-kjm33rwg1a.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\wmgko3ir4p-kjm33rwg1a.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "Components/Overlay/FluentOverlay.razor.js.gz",
       "AssetKind": "All",
@@ -773,10 +773,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\Components\\Overlay\\FluentOverlay.razor.js"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\x5t7snkdd9-a8m5cweeeb.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\x5t7snkdd9-a8m5cweeeb.gz",
       "SourceId": "task-management.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/task-management.Web",
       "RelativePath": "favicon#[.{fingerprint=a8m5cweeeb}]?.ico.gz",
       "AssetKind": "All",
@@ -784,20 +784,20 @@
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\wwwroot\\favicon.ico",
+      "RelatedAsset": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\wwwroot\\favicon.ico",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
       "Fingerprint": "lv19d4ri1a",
       "Integrity": "P6HBbEJ0eZi/m1PmO8SAHdJL1XHEjrq2+bDgcIheHt0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\wwwroot\\favicon.ico"
+      "OriginalItemSpec": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\wwwroot\\favicon.ico"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\xaxmssuyjk-nv5wbdzqw1.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\xaxmssuyjk-nv5wbdzqw1.gz",
       "SourceId": "Microsoft.FluentUI.AspNetCore.Components",
       "SourceType": "Package",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Microsoft.FluentUI.AspNetCore.Components",
       "RelativePath": "Microsoft.FluentUI.AspNetCore.Components.nv5wbdzqw1.bundle.scp.css.gz",
       "AssetKind": "All",
@@ -815,10 +815,10 @@
       "OriginalItemSpec": "X:\\packages\\NuGet\\cache\\microsoft.fluentui.aspnetcore.components\\4.11.0\\staticwebassets\\Microsoft.FluentUI.AspNetCore.Components.nv5wbdzqw1.bundle.scp.css"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\xnonorf4tv-6ho21w0tbl.gz",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\xnonorf4tv-6ho21w0tbl.gz",
       "SourceId": "task-management.Web",
       "SourceType": "Computed",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/task-management.Web",
       "RelativePath": "task-management.Web#[.{fingerprint=6ho21w0tbl}]?.styles.css.gz",
       "AssetKind": "All",
@@ -826,20 +826,20 @@
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\scopedcss\\bundle\\task-management.Web.styles.css",
+      "RelatedAsset": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\scopedcss\\bundle\\task-management.Web.styles.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
       "Fingerprint": "6ttt5lj8kj",
       "Integrity": "KgUFxgI3DvgHCBoSOYRH4iEqwX+dAk448+eeKDLE8jA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\scopedcss\\bundle\\task-management.Web.styles.css"
+      "OriginalItemSpec": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\scopedcss\\bundle\\task-management.Web.styles.css"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\jsmodules\\jsmodules.build.manifest.json",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\jsmodules\\jsmodules.build.manifest.json",
       "SourceId": "task-management.Web",
       "SourceType": "Computed",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\jsmodules\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\jsmodules\\",
       "BasePath": "_content/task-management.Web",
       "RelativePath": "task-management.Web.modules.json",
       "AssetKind": "Build",
@@ -857,10 +857,10 @@
       "OriginalItemSpec": "obj\\Debug\\net9.0\\jsmodules\\jsmodules.build.manifest.json"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\scopedcss\\bundle\\task-management.Web.styles.css",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\scopedcss\\bundle\\task-management.Web.styles.css",
       "SourceId": "task-management.Web",
       "SourceType": "Computed",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\scopedcss\\bundle\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\scopedcss\\bundle\\",
       "BasePath": "_content/task-management.Web",
       "RelativePath": "task-management.Web#[.{fingerprint}]?.styles.css",
       "AssetKind": "All",
@@ -875,13 +875,13 @@
       "Integrity": "lrZT34IjsZaqkhVelMrT45SducJPj6FdGvClyDbb+Hg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\scopedcss\\bundle\\task-management.Web.styles.css"
+      "OriginalItemSpec": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\scopedcss\\bundle\\task-management.Web.styles.css"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\wwwroot\\app.css",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\wwwroot\\app.css",
       "SourceId": "task-management.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\wwwroot\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\wwwroot\\",
       "BasePath": "_content/task-management.Web",
       "RelativePath": "app#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -899,10 +899,10 @@
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\wwwroot\\favicon.ico",
+      "Identity": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\wwwroot\\favicon.ico",
       "SourceId": "task-management.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\wwwroot\\",
+      "ContentRoot": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\wwwroot\\",
       "BasePath": "_content/task-management.Web",
       "RelativePath": "favicon#[.{fingerprint}]?.ico",
       "AssetKind": "All",
@@ -1658,7 +1658,7 @@
   "Endpoints": [
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/Anchor/FluentAnchor.razor.js",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\cdrmjjq1d6-dpoev2zj9b.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\cdrmjjq1d6-dpoev2zj9b.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -1758,7 +1758,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/Anchor/FluentAnchor.razor.js.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\cdrmjjq1d6-dpoev2zj9b.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\cdrmjjq1d6-dpoev2zj9b.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1803,7 +1803,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/AnchoredRegion/FluentAnchoredRegion.razor.js",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\twd6d0wh4o-819w3ybe2d.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\twd6d0wh4o-819w3ybe2d.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -1903,7 +1903,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/AnchoredRegion/FluentAnchoredRegion.razor.js.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\twd6d0wh4o-819w3ybe2d.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\twd6d0wh4o-819w3ybe2d.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1948,7 +1948,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/Button/FluentButton.razor.js",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\akzl5bxou0-p6kf5zqzit.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\akzl5bxou0-p6kf5zqzit.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -2048,7 +2048,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/Button/FluentButton.razor.js.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\akzl5bxou0-p6kf5zqzit.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\akzl5bxou0-p6kf5zqzit.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2093,7 +2093,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/Checkbox/FluentCheckbox.razor.js",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\cq4bmj8gmb-zjzit57lox.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\cq4bmj8gmb-zjzit57lox.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -2193,7 +2193,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/Checkbox/FluentCheckbox.razor.js.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\cq4bmj8gmb-zjzit57lox.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\cq4bmj8gmb-zjzit57lox.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2238,7 +2238,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/DataGrid/FluentDataGrid.razor.js",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\klh9ieqob8-lkb3k16ltm.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\klh9ieqob8-lkb3k16ltm.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -2338,7 +2338,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/DataGrid/FluentDataGrid.razor.js.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\klh9ieqob8-lkb3k16ltm.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\klh9ieqob8-lkb3k16ltm.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2383,7 +2383,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/DesignSystemProvider/FluentDesignTheme.razor.js",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\4jvn6qpxj5-vyjqmndgy2.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\4jvn6qpxj5-vyjqmndgy2.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -2483,7 +2483,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/DesignSystemProvider/FluentDesignTheme.razor.js.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\4jvn6qpxj5-vyjqmndgy2.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\4jvn6qpxj5-vyjqmndgy2.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2528,7 +2528,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/Divider/FluentDivider.razor.js",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\7g337ulk4n-iy34mpf72d.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\7g337ulk4n-iy34mpf72d.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -2628,7 +2628,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/Divider/FluentDivider.razor.js.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\7g337ulk4n-iy34mpf72d.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\7g337ulk4n-iy34mpf72d.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2673,7 +2673,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/Grid/FluentGrid.razor.js",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\6mwvvlkmgj-hi1gwvth64.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\6mwvvlkmgj-hi1gwvth64.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -2773,7 +2773,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/Grid/FluentGrid.razor.js.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\6mwvvlkmgj-hi1gwvth64.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\6mwvvlkmgj-hi1gwvth64.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2818,7 +2818,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/HorizontalScroll/FluentHorizontalScroll.razor.js",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\pfc9to5k3q-5pcucyxosc.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\pfc9to5k3q-5pcucyxosc.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -2918,7 +2918,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/HorizontalScroll/FluentHorizontalScroll.razor.js.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\pfc9to5k3q-5pcucyxosc.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\pfc9to5k3q-5pcucyxosc.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2963,7 +2963,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/InputFile/FluentInputFile.razor.js",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\h0qxm5u0yy-vjluklws0l.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\h0qxm5u0yy-vjluklws0l.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -3063,7 +3063,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/InputFile/FluentInputFile.razor.js.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\h0qxm5u0yy-vjluklws0l.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\h0qxm5u0yy-vjluklws0l.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3108,7 +3108,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/KeyCode/FluentKeyCode.razor.js",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\win2gt64sq-pu9hn1jugj.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\win2gt64sq-pu9hn1jugj.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -3208,7 +3208,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/KeyCode/FluentKeyCode.razor.js.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\win2gt64sq-pu9hn1jugj.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\win2gt64sq-pu9hn1jugj.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3253,7 +3253,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/Label/FluentInputLabel.razor.js",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\ijuf810ucb-xp2f0e0rh3.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\ijuf810ucb-xp2f0e0rh3.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -3353,7 +3353,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/Label/FluentInputLabel.razor.js.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\ijuf810ucb-xp2f0e0rh3.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\ijuf810ucb-xp2f0e0rh3.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3398,7 +3398,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/List/FluentAutocomplete.razor.js",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\6o9gthdpke-psptt994gq.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\6o9gthdpke-psptt994gq.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -3498,7 +3498,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/List/FluentAutocomplete.razor.js.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\6o9gthdpke-psptt994gq.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\6o9gthdpke-psptt994gq.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3543,7 +3543,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/List/FluentCombobox.razor.js",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\tb98bamshq-g9dxtzlran.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\tb98bamshq-g9dxtzlran.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -3643,7 +3643,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/List/FluentCombobox.razor.js.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\tb98bamshq-g9dxtzlran.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\tb98bamshq-g9dxtzlran.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3688,7 +3688,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/List/ListComponentBase.razor.js",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\ffdjjohsnc-mmp1yy7un5.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\ffdjjohsnc-mmp1yy7un5.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -3788,7 +3788,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/List/ListComponentBase.razor.js.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\ffdjjohsnc-mmp1yy7un5.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\ffdjjohsnc-mmp1yy7un5.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3833,7 +3833,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/Menu/FluentMenu.razor.js",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\pn46o4hdgm-5wrroj4j54.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\pn46o4hdgm-5wrroj4j54.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -3933,7 +3933,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/Menu/FluentMenu.razor.js.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\pn46o4hdgm-5wrroj4j54.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\pn46o4hdgm-5wrroj4j54.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3978,7 +3978,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/NavMenu/FluentNavMenu.razor.js",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\4sjayj892b-9fmja7pljs.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\4sjayj892b-9fmja7pljs.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -4078,7 +4078,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/NavMenu/FluentNavMenu.razor.js.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\4sjayj892b-9fmja7pljs.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\4sjayj892b-9fmja7pljs.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4123,7 +4123,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/Overflow/FluentOverflow.razor.js",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\mm8wr5jb95-rgycuwl3sw.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\mm8wr5jb95-rgycuwl3sw.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -4223,7 +4223,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/Overflow/FluentOverflow.razor.js.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\mm8wr5jb95-rgycuwl3sw.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\mm8wr5jb95-rgycuwl3sw.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4268,7 +4268,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/Overlay/FluentOverlay.razor.js",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\wmgko3ir4p-kjm33rwg1a.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\wmgko3ir4p-kjm33rwg1a.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -4368,7 +4368,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/Overlay/FluentOverlay.razor.js.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\wmgko3ir4p-kjm33rwg1a.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\wmgko3ir4p-kjm33rwg1a.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4413,7 +4413,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/PullToRefresh/FluentPullToRefresh.razor.js",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\jq2jihf5fr-awzanx0pu8.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\jq2jihf5fr-awzanx0pu8.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -4513,7 +4513,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/PullToRefresh/FluentPullToRefresh.razor.js.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\jq2jihf5fr-awzanx0pu8.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\jq2jihf5fr-awzanx0pu8.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4558,7 +4558,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/Search/FluentSearch.razor.js",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\uslingtyva-rkj8st4k2x.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\uslingtyva-rkj8st4k2x.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -4658,7 +4658,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/Search/FluentSearch.razor.js.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\uslingtyva-rkj8st4k2x.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\uslingtyva-rkj8st4k2x.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4703,7 +4703,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/Slider/FluentSlider.razor.js",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\2b4v2q74ar-0b0bj86z40.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\2b4v2q74ar-0b0bj86z40.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -4803,7 +4803,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/Slider/FluentSlider.razor.js.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\2b4v2q74ar-0b0bj86z40.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\2b4v2q74ar-0b0bj86z40.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4848,7 +4848,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/Slider/FluentSliderLabel.razor.js",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\5eye7ha8pe-e5lgg05xwp.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\5eye7ha8pe-e5lgg05xwp.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -4948,7 +4948,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/Slider/FluentSliderLabel.razor.js.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\5eye7ha8pe-e5lgg05xwp.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\5eye7ha8pe-e5lgg05xwp.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4993,7 +4993,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/SortableList/FluentSortableList.razor.js",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\fiqznfocyn-ki10xp5gks.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\fiqznfocyn-ki10xp5gks.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -5093,7 +5093,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/SortableList/FluentSortableList.razor.js.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\fiqznfocyn-ki10xp5gks.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\fiqznfocyn-ki10xp5gks.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5138,7 +5138,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/Splitter/FluentMultiSplitter.razor.js",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\5dcvuemm5a-s9hcthfn4x.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\5dcvuemm5a-s9hcthfn4x.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -5238,7 +5238,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/Splitter/FluentMultiSplitter.razor.js.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\5dcvuemm5a-s9hcthfn4x.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\5dcvuemm5a-s9hcthfn4x.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5283,7 +5283,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/Tabs/FluentTab.razor.js",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\sc7iw8bo2n-idf8r2y2gj.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\sc7iw8bo2n-idf8r2y2gj.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -5383,7 +5383,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/Tabs/FluentTab.razor.js.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\sc7iw8bo2n-idf8r2y2gj.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\sc7iw8bo2n-idf8r2y2gj.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5428,7 +5428,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/TextField/FluentTextField.razor.js",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\sbcuig79xm-uxxx5b63uj.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\sbcuig79xm-uxxx5b63uj.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -5528,7 +5528,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/TextField/FluentTextField.razor.js.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\sbcuig79xm-uxxx5b63uj.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\sbcuig79xm-uxxx5b63uj.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5573,7 +5573,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/Tooltip/FluentTooltip.razor.js",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\is0nail857-b0dyrub9as.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\is0nail857-b0dyrub9as.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -5673,7 +5673,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Components/Tooltip/FluentTooltip.razor.js.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\is0nail857-b0dyrub9as.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\is0nail857-b0dyrub9as.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5763,7 +5763,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/css/reboot.css",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\6nn42apl8y-1dlotxxwer.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\6nn42apl8y-1dlotxxwer.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -5855,7 +5855,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/css/reboot.css.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\6nn42apl8y-1dlotxxwer.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\6nn42apl8y-1dlotxxwer.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5945,7 +5945,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/js/initializersLoader.webview.js",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\m1yjzwotev-f8c5bd5212.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\m1yjzwotev-f8c5bd5212.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -6037,7 +6037,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/js/initializersLoader.webview.js.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\m1yjzwotev-f8c5bd5212.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\m1yjzwotev-f8c5bd5212.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6082,7 +6082,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/js/loading-theme.js",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\ruk4ibgzyp-t5s4sbrbsi.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\ruk4ibgzyp-t5s4sbrbsi.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -6174,7 +6174,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/js/loading-theme.js.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\ruk4ibgzyp-t5s4sbrbsi.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\ruk4ibgzyp-t5s4sbrbsi.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6264,7 +6264,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Microsoft.FluentUI.AspNetCore.Components.bundle.scp.css",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\xaxmssuyjk-nv5wbdzqw1.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\xaxmssuyjk-nv5wbdzqw1.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -6356,7 +6356,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Microsoft.FluentUI.AspNetCore.Components.lib.module.js",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\kwrall9b0s-y92cxfqtgl.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\kwrall9b0s-y92cxfqtgl.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -6464,7 +6464,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Microsoft.FluentUI.AspNetCore.Components.lib.module.js.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\kwrall9b0s-y92cxfqtgl.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\kwrall9b0s-y92cxfqtgl.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6509,7 +6509,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Microsoft.FluentUI.AspNetCore.Components.lib.module.js.LEGAL.txt",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\m3ffqup1h6-kz8gc8cxma.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\m3ffqup1h6-kz8gc8cxma.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -6601,7 +6601,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Microsoft.FluentUI.AspNetCore.Components.lib.module.js.LEGAL.txt.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\m3ffqup1h6-kz8gc8cxma.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\m3ffqup1h6-kz8gc8cxma.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6646,7 +6646,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Microsoft.FluentUI.AspNetCore.Components.lib.module.js.map",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\3emkb5z5ma-8j22j5h3b2.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\3emkb5z5ma-8j22j5h3b2.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -6738,7 +6738,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Microsoft.FluentUI.AspNetCore.Components.lib.module.js.map.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\3emkb5z5ma-8j22j5h3b2.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\3emkb5z5ma-8j22j5h3b2.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6828,7 +6828,7 @@
     },
     {
       "Route": "_content/Microsoft.FluentUI.AspNetCore.Components/Microsoft.FluentUI.AspNetCore.Components.nv5wbdzqw1.bundle.scp.css.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\xaxmssuyjk-nv5wbdzqw1.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\xaxmssuyjk-nv5wbdzqw1.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6873,7 +6873,7 @@
     },
     {
       "Route": "app.62qhu097vx.css",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\271piowt2t-62qhu097vx.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\271piowt2t-62qhu097vx.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -6936,7 +6936,7 @@
     },
     {
       "Route": "app.62qhu097vx.css",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\wwwroot\\app.css",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\wwwroot\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6981,7 +6981,7 @@
     },
     {
       "Route": "app.62qhu097vx.css.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\271piowt2t-62qhu097vx.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\271piowt2t-62qhu097vx.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7034,7 +7034,7 @@
     },
     {
       "Route": "app.css",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\271piowt2t-62qhu097vx.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\271piowt2t-62qhu097vx.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -7089,7 +7089,7 @@
     },
     {
       "Route": "app.css",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\wwwroot\\app.css",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\wwwroot\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7126,7 +7126,7 @@
     },
     {
       "Route": "app.css.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\271piowt2t-62qhu097vx.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\271piowt2t-62qhu097vx.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7171,7 +7171,7 @@
     },
     {
       "Route": "favicon.a8m5cweeeb.ico",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\x5t7snkdd9-a8m5cweeeb.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\x5t7snkdd9-a8m5cweeeb.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -7234,7 +7234,7 @@
     },
     {
       "Route": "favicon.a8m5cweeeb.ico",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\wwwroot\\favicon.ico",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\wwwroot\\favicon.ico",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7279,7 +7279,7 @@
     },
     {
       "Route": "favicon.a8m5cweeeb.ico.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\x5t7snkdd9-a8m5cweeeb.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\x5t7snkdd9-a8m5cweeeb.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7332,7 +7332,7 @@
     },
     {
       "Route": "favicon.ico",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\x5t7snkdd9-a8m5cweeeb.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\x5t7snkdd9-a8m5cweeeb.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -7387,7 +7387,7 @@
     },
     {
       "Route": "favicon.ico",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\wwwroot\\favicon.ico",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\wwwroot\\favicon.ico",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7424,7 +7424,7 @@
     },
     {
       "Route": "favicon.ico.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\x5t7snkdd9-a8m5cweeeb.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\x5t7snkdd9-a8m5cweeeb.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7469,7 +7469,7 @@
     },
     {
       "Route": "task-management.Web.6ho21w0tbl.styles.css",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\xnonorf4tv-6ho21w0tbl.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\xnonorf4tv-6ho21w0tbl.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -7536,7 +7536,7 @@
     },
     {
       "Route": "task-management.Web.6ho21w0tbl.styles.css",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\scopedcss\\bundle\\task-management.Web.styles.css",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\scopedcss\\bundle\\task-management.Web.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7585,7 +7585,7 @@
     },
     {
       "Route": "task-management.Web.6ho21w0tbl.styles.css.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\xnonorf4tv-6ho21w0tbl.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\xnonorf4tv-6ho21w0tbl.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7638,7 +7638,7 @@
     },
     {
       "Route": "task-management.Web.modules.json",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\bw0u5a3nbj-uhfllo7vmv.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\bw0u5a3nbj-uhfllo7vmv.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -7693,7 +7693,7 @@
     },
     {
       "Route": "task-management.Web.modules.json",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\jsmodules\\jsmodules.build.manifest.json",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\jsmodules\\jsmodules.build.manifest.json",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7730,7 +7730,7 @@
     },
     {
       "Route": "task-management.Web.modules.json.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\bw0u5a3nbj-uhfllo7vmv.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\bw0u5a3nbj-uhfllo7vmv.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7775,7 +7775,7 @@
     },
     {
       "Route": "task-management.Web.styles.css",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\xnonorf4tv-6ho21w0tbl.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\xnonorf4tv-6ho21w0tbl.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -7834,7 +7834,7 @@
     },
     {
       "Route": "task-management.Web.styles.css",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\scopedcss\\bundle\\task-management.Web.styles.css",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\scopedcss\\bundle\\task-management.Web.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7875,7 +7875,7 @@
     },
     {
       "Route": "task-management.Web.styles.css.gz",
-      "AssetFile": "X:\\ASource\\Local\\blazor\\fluentui\\task-management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\xnonorf4tv-6ho21w0tbl.gz",
+      "AssetFile": "x:\\ASource\\Github\\blazor_task_management\\task-management.Web\\obj\\Debug\\net9.0\\compressed\\xnonorf4tv-6ho21w0tbl.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {

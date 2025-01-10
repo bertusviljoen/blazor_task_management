@@ -10,3 +10,16 @@ x:\ASource\Local\blazor\fluentui\task-management\task-management.ServiceDefaults
 x:\ASource\Local\blazor\fluentui\task-management\task-management.ServiceDefaults\obj\Debug\net9.0\refint\task-management.ServiceDefaults.dll
 x:\ASource\Local\blazor\fluentui\task-management\task-management.ServiceDefaults\obj\Debug\net9.0\task-management.ServiceDefaults.pdb
 X:\ASource\Local\blazor\fluentui\task-management\task-management.ServiceDefaults\obj\Debug\net9.0\ref\task-management.ServiceDefaults.dll
+X:\ASource\Github\blazor_task_management\task-management.ServiceDefaults\bin\Debug\net9.0\task-management.ServiceDefaults.deps.json
+x:\ASource\Github\blazor_task_management\task-management.ServiceDefaults\bin\Debug\net9.0\task-management.ServiceDefaults.dll
+x:\ASource\Github\blazor_task_management\task-management.ServiceDefaults\bin\Debug\net9.0\task-management.ServiceDefaults.pdb
+x:\ASource\Github\blazor_task_management\task-management.ServiceDefaults\obj\Debug\net9.0\task-management.ServiceDefaults.csproj.AssemblyReference.cache
+x:\ASource\Github\blazor_task_management\task-management.ServiceDefaults\obj\Debug\net9.0\task-management.ServiceDefaults.GeneratedMSBuildEditorConfig.editorconfig
+x:\ASource\Github\blazor_task_management\task-management.ServiceDefaults\obj\Debug\net9.0\task-management.ServiceDefaults.AssemblyInfoInputs.cache
+x:\ASource\Github\blazor_task_management\task-management.ServiceDefaults\obj\Debug\net9.0\task-management.ServiceDefaults.AssemblyInfo.cs
+x:\ASource\Github\blazor_task_management\task-management.ServiceDefaults\obj\Debug\net9.0\task-management.ServiceDefaults.csproj.CoreCompileInputs.cache
+x:\ASource\Github\blazor_task_management\task-management.ServiceDefaults\obj\Debug\net9.0\task-management.ServiceDefaults.sourcelink.json
+x:\ASource\Github\blazor_task_management\task-management.ServiceDefaults\obj\Debug\net9.0\task-management.ServiceDefaults.dll
+x:\ASource\Github\blazor_task_management\task-management.ServiceDefaults\obj\Debug\net9.0\refint\task-management.ServiceDefaults.dll
+x:\ASource\Github\blazor_task_management\task-management.ServiceDefaults\obj\Debug\net9.0\task-management.ServiceDefaults.pdb
+X:\ASource\Github\blazor_task_management\task-management.ServiceDefaults\obj\Debug\net9.0\ref\task-management.ServiceDefaults.dll
