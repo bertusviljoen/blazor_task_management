@@ -12,13 +12,12 @@
     <FluentLabel>Justify</FluentLabel>
     <FluentSelect Items=@(Enum.GetValues<JustifyContent>()) OptionValue="@(c => c.ToAttributeValue())"
         TOption="JustifyContent" Position="SelectPosition.Below" @bind-SelectedOption="@Justification" />
-
     <FluentLabel>Spacing</FluentLabel>
     <FluentSlider @bind-Value="@Spacing" Min="0" Max="10" Step="1" Style="max-width: 300px; margin-top: 18px;" />
 </FluentStack>
 
-<FluentGrid Spacing="@Spacing" OnBreakpointEnter="@OnBreakpointEnterHandler" AdaptiveRendering="true"
-    Justify="@Justification">
+<FluentGrid Spacing="@Spacing" Justify="@Justification"
+    OnBreakpointEnter="@OnBreakpointEnterHandler" AdaptiveRendering="true">
 
     <FluentGridItem xs="6" sm="3">
         <FluentCard>
@@ -50,18 +49,19 @@
             </FluentStack>
         </FluentCard>
     </FluentGridItem>
-    <FluentGridItem xs="12">
-        <FluentCard>
-            <FluentDataGrid TGridItem="SalesRecord" Items="@salesData" GridTemplateColumns="1fr 1fr 1fr"
-                ResizableColumns="true" Sortable="true">
-                <PropertyColumn Title="Product" Property="@(item => item.Product)" />
-                <PropertyColumn Title="Quantity Sold" Property="@(item => item.QuantitySold)" />
-                <PropertyColumn Title="Revenue" Property="@(item => item.Revenue)" />
-            </FluentDataGrid>
-        </FluentCard>
-    </FluentGridItem>
+    @* <FluentGridItem xs="12"> *@
+    @*     <FluentCard> *@
+    @*         <FluentDataGrid TGridItem="SalesRecord" Items="@salesData" GridTemplateColumns="1fr 1fr 1fr" *@
+    @*             ResizableColumns="true" Sortable="true"> *@
+    @*             <PropertyColumn Title="Product" Property="@(item => item.Product)" /> *@
+    @*             <PropertyColumn Title="Quantity Sold" Property="@(item => item.QuantitySold)" /> *@
+    @*             <PropertyColumn Title="Revenue" Property="@(item => item.Revenue)" /> *@
+    @*         </FluentDataGrid> *@
+    @*     </FluentCard> *@
+    @* </FluentGridItem> *@
 </FluentGrid>
 
+@* Second Row of Cards *@
 <FluentGrid Spacing="@Spacing" Justify="@Justification">
     <FluentGridItem xs="6" sm="3">
         <FluentCard>
@@ -107,7 +107,6 @@
         </FluentCard>
     </FluentGridItem>
 </FluentGrid>
-
 
 @code {
 
