@@ -73,14 +73,12 @@ internal sealed class DatabaseInitializer(
         var categories = new[]
         {
             new Category {
-                Id = 1,
                 Name = "Personal",
                 Description = "Tasks related to personal life",
                 Tasks = new List<TaskItem>()
                 {
                     new TaskItem()
                     {
-                        Id = 1,
                         Title = "Renew Car License",
                         Description = "Renew car license before expiry which is on 15th of this month",
                         DueDate = DateTime.UtcNow.AddDays(7),
@@ -91,7 +89,6 @@ internal sealed class DatabaseInitializer(
                 CreatedAt = DateTime.UtcNow
             },
             new Category {
-                Id = 2,
                 Name = "Work",
                 Description = "Tasks related to work",
                 Tasks = new List<TaskItem>(),

@@ -24,8 +24,21 @@ builder.Services.Configure<JsonOptions>(options =>
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
+//Configure the CosmosDataContextOptions
+builder.Services.Configure<CosmosDataContextOptions>(builder.Configuration.GetSection("CosmosDb"));
+
+//Specify default options for the CosmosDataContextOptions
+builder.Services.PostConfigure<CosmosDataContextOptions>(options =>
+{
+    if (string.IsNullOrEmpty(options.DatabaseName))
+        options.DatabaseName = builder.Configuration["CosmosDb:DatabaseName"] ?? "task-management-db";
+});
+
+builder.Services.AddScoped<IDataContext, CosmosDataContext>();
 
 builder.Services.AddHostedService<DatabaseInitializer>();
+
+
 
 var app = builder.Build();
 
@@ -64,7 +77,7 @@ app.MapGet("/weatherforecast", () =>
 
 app.MapDefaultEndpoints();
 
-//app.MapProjectEndpoints();
+app.MapCategoryEndpoints();
 
 app.Run();
 

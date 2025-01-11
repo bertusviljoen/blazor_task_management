@@ -2,7 +2,7 @@ namespace task_management.ApiService.Models;
 
 public class TaskItem
 {
-    public required int Id { get; set; }
+    public Guid Id { get; set; } = Guid.NewGuid();
     public required string Title { get; set; }
     public string Description { get; set; } = string.Empty;
     public required DateTime DueDate { get; set; }
