@@ -2,13 +2,12 @@ namespace task_management.ApiService.Models;
 
 public class TaskItem
 {
-    public int Id { get; set; }
-    public string Title { get; set; } = string.Empty;
+    public required int Id { get; set; }
+    public required string Title { get; set; }
     public string Description { get; set; } = string.Empty;
-    public DateTime DueDate { get; set; }
-    public TaskStatus Status { get; set; }
-    public int ProjectId { get; set; }
-    public Project? Project { get; set; }
-    public DateTime CreatedAt { get; set; }
+    public required DateTime DueDate { get; set; }
+    public TaskItemStatus ItemStatus { get; set; } = TaskItemStatus.Todo;
+    public TaskItemPriority Priority { get; set; } = TaskItemPriority.Low;
+    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public DateTime? UpdatedAt { get; set; }
 }

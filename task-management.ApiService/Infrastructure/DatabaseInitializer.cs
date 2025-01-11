@@ -38,7 +38,7 @@ internal sealed class DatabaseInitializer(
     private async Task InitializeDatabase()
     {
         var databaseName = configuration["CosmosDb:DatabaseName"] ?? "task-management-db";
-        var containerName = configuration["CosmosDb:ContainerName"] ?? "Project";
+        var containerName = configuration["CosmosDb:ContainerName"] ?? nameof(Category);
 
         var database = cosmosClient.GetDatabase(databaseName);
 
@@ -54,14 +54,12 @@ internal sealed class DatabaseInitializer(
 
     private async Task SeedInitialData()
     {
-
+        //ToDo: Have to do this better with Aspire. It is currently empty
         var databaseName = configuration["CosmosDb:DatabaseName"] ?? "task-management-db";
-        var containerName = configuration["CosmosDb:ContainerName"] ?? "Project";
+        var containerName = configuration["CosmosDb:ContainerName"] ?? nameof(Category);
 
         var container = cosmosClient.GetContainer(databaseName, containerName);
-
-
-        // Check if container is empty
+        
         var query = new QueryDefinition("SELECT VALUE COUNT(1) FROM c");
         var count = (await container.GetItemQueryIterator<int>(query).ReadNextAsync()).FirstOrDefault();
 
@@ -72,34 +70,38 @@ internal sealed class DatabaseInitializer(
 
         logger.LogInformation("Seeding initial projects.");
 
-        var projects = new[]
+        var categories = new[]
         {
-            new Project {
+            new Category {
                 Id = 1,
-                Name = "Website Redesign",
-                Description = "Redesign company website with modern look and feel",
-                Tasks = new List<TaskItem>(),
+                Name = "Personal",
+                Description = "Tasks related to personal life",
+                Tasks = new List<TaskItem>()
+                {
+                    new TaskItem()
+                    {
+                        Id = 1,
+                        Title = "Renew Car License",
+                        Description = "Renew car license before expiry which is on 15th of this month",
+                        DueDate = DateTime.UtcNow.AddDays(7),
+                        ItemStatus = TaskItemStatus.Todo,
+                        CreatedAt = DateTime.UtcNow
+                    }
+                },
                 CreatedAt = DateTime.UtcNow
             },
-            new Project {
+            new Category {
                 Id = 2,
-                Name = "Mobile App Development",
-                Description = "Develop cross-platform mobile application",
-                Tasks = new List<TaskItem>(),
-                CreatedAt = DateTime.UtcNow
-            },
-            new Project {
-                Id = 3,
-                Name = "API Migration",
-                Description = "Migrate legacy APIs to microservices architecture",
+                Name = "Work",
+                Description = "Tasks related to work",
                 Tasks = new List<TaskItem>(),
                 CreatedAt = DateTime.UtcNow
             }
         };
 
-        foreach (var project in projects)
+        foreach (var category in categories)
         {
-            await container.CreateItemAsync(project, new PartitionKey(project.Id.ToString()));
+            await container.CreateItemAsync(category);
         }
     }
 }

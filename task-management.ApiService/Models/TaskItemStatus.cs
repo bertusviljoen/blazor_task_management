@@ -1,6 +1,6 @@
 namespace task_management.ApiService.Models;
 
-public enum TaskStatus
+public enum TaskItemStatus
 {
     Todo,
     InProgress,
