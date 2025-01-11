@@ -29,59 +29,72 @@ else
 
         @foreach (var category in categories)
         {
-            <FluentGridItem xs="6" sm="3">
-                <FluentCard>
+            <FluentGridItem xs="12">
                     <FluentStack Orientation="Orientation.Vertical" HorizontalAlignment="HorizontalAlignment.Center"
                         VerticalAlignment="VerticalAlignment.Center">
                         <FluentIcon Value="@(new Icons.Regular.Size24.Folder())" />
                         <FluentLabel Typo="Typography.H4" Style="text-align: center;">@category.Name</FluentLabel>
+                    </FluentStack>
+            </FluentGridItem>
 
-                        <FluentStack Orientation="Orientation.Horizontal" HorizontalAlignment="HorizontalAlignment.Center">
-                            <FluentIcon Value="@(new Icons.Regular.Size24.TaskListAdd())" />
-                            <FluentLabel Typo="Typography.H5">@category.Tasks.Count Tasks</FluentLabel>
-                        </FluentStack>
+            <FluentGridItem xs="6" sm="3">
+                <FluentCard>
+                    <FluentStack Orientation="Orientation.Vertical" HorizontalAlignment="HorizontalAlignment.Center"
+                        VerticalAlignment="VerticalAlignment.Center">
+                        <FluentIcon Value="@(new Icons.Regular.Size24.TaskListAdd())" />
+                        <FluentLabel Typo="Typography.H5">@category.Tasks.Count Tasks</FluentLabel>
+                    </FluentStack>
+                </FluentCard>
+            </FluentGridItem>
 
-                        <FluentStack Orientation="Orientation.Horizontal" HorizontalAlignment="HorizontalAlignment.Center">
-                            <FluentIcon Value="@(new Icons.Regular.Size24.ArrowSync())" />
-                            <FluentLabel Typo="Typography.H5">
-                                @category.Tasks.Count(t => t.Status == TaskItemStatus.InProgress) In Progress
-                            </FluentLabel>
-                        </FluentStack>
+            <FluentGridItem xs="6" sm="3">
+                <FluentCard>
+                    <FluentStack Orientation="Orientation.Vertical" HorizontalAlignment="HorizontalAlignment.Center"
+                        VerticalAlignment="VerticalAlignment.Center">
+                        <FluentIcon Value="@(new Icons.Regular.Size24.ArrowSync())" />
+                        <FluentLabel Typo="Typography.H5">
+                            @category.Tasks.Count(t => t.Status == TaskItemStatus.InProgress) In Progress
+                        </FluentLabel>
+                    </FluentStack>
+                </FluentCard>
+            </FluentGridItem>
 
-                        <FluentStack Orientation="Orientation.Horizontal" HorizontalAlignment="HorizontalAlignment.Center">
-                            <FluentIcon Value="@(new Icons.Regular.Size24.CheckmarkCircle())" />
-                            <FluentLabel Typo="Typography.H5">
-                                @category.Tasks.Count(t => t.Status == TaskItemStatus.Done) Completed
-                            </FluentLabel>
-                        </FluentStack>
+            <FluentGridItem xs="6" sm="3">
+                <FluentCard>
+                    <FluentStack Orientation="Orientation.Vertical" HorizontalAlignment="HorizontalAlignment.Center"
+                        VerticalAlignment="VerticalAlignment.Center">
+                        <FluentIcon Value="@(new Icons.Regular.Size24.CheckmarkCircle())" />
+                        <FluentLabel Typo="Typography.H5">
+                            @category.Tasks.Count(t => t.Status == TaskItemStatus.Done) Completed
+                        </FluentLabel>
+                    </FluentStack>
+                </FluentCard>
+            </FluentGridItem>
 
-                        <FluentStack Orientation="Orientation.Horizontal" HorizontalAlignment="HorizontalAlignment.Center">
-                            <FluentIcon Value="@(new Icons.Regular.Size24.Alert())" />
-                            <FluentLabel Typo="Typography.H5">
-                                @category.Tasks.Count(t => t.Priority == TaskItemPriority.High) High Priority
-                            </FluentLabel>
-                        </FluentStack>
+            <FluentGridItem xs="6" sm="3">
+                <FluentCard>
+                    <FluentStack Orientation="Orientation.Vertical" HorizontalAlignment="HorizontalAlignment.Center"
+                        VerticalAlignment="VerticalAlignment.Center">
+                        <FluentIcon Value="@(new Icons.Regular.Size24.Alert())" />
+                        <FluentLabel Typo="Typography.H5">
+                            @category.Tasks.Count(t => t.Priority == TaskItemPriority.High) High Priority
+                        </FluentLabel>
+                    </FluentStack>
+                </FluentCard>
+            </FluentGridItem>
 
-                        <FluentStack Orientation="Orientation.Horizontal" HorizontalAlignment="HorizontalAlignment.Center">
-                            <FluentIcon Value="@(new Icons.Regular.Size24.ClockAlarm())" />
-                            <FluentLabel Typo="Typography.H5">
-                                @category.Tasks.Count(t => t.DueDate.HasValue && t.DueDate.Value.Date < DateTime.Today) Overdue
-                            </FluentLabel>
-                        </FluentStack>
+            <FluentGridItem xs="6" sm="3">
+                <FluentCard>
+                    <FluentStack Orientation="Orientation.Vertical" HorizontalAlignment="HorizontalAlignment.Center"
+                        VerticalAlignment="VerticalAlignment.Center">
+                        <FluentIcon Value="@(new Icons.Regular.Size24.ClockAlarm())" />
+                        <FluentLabel Typo="Typography.H5">
+                            @category.Tasks.Count(t => t.DueDate.HasValue && t.DueDate.Value.Date < DateTime.Today) Overdue
+                        </FluentLabel>
                     </FluentStack>
                 </FluentCard>
             </FluentGridItem>
         }
-        @* <FluentGridItem xs="12"> *@
-        @*     <FluentCard> *@
-        @*         <FluentDataGrid TGridItem="SalesRecord" Items="@salesData" GridTemplateColumns="1fr 1fr 1fr" *@
-        @*             ResizableColumns="true" Sortable="true"> *@
-        @*             <PropertyColumn Title="Product" Property="@(item => item.Product)" /> *@
-        @*             <PropertyColumn Title="Quantity Sold" Property="@(item => item.QuantitySold)" /> *@
-        @*             <PropertyColumn Title="Revenue" Property="@(item => item.Revenue)" /> *@
-        @*         </FluentDataGrid> *@
-        @*     </FluentCard> *@
-        @* </FluentGridItem> *@
     </FluentGrid>
 }
 
@@ -102,20 +115,4 @@ else
     {
 
     }
-
-    // Sample data model
-    public class SalesRecord
-    {
-        public required string Product { get; set; }
-        public int QuantitySold { get; set; }
-        public decimal Revenue { get; set; }
-    }
-
-    // Sample data
-    private IQueryable<SalesRecord> salesData = new List<SalesRecord>
-{
-new SalesRecord { Product = "Product A", QuantitySold = 100, Revenue = 1000m },
-new SalesRecord { Product = "Product B", QuantitySold = 150, Revenue = 1500m },
-new SalesRecord { Product = "Product C", QuantitySold = 200, Revenue = 2000m }
-}.AsQueryable();
 }
