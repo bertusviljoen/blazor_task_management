@@ -1,4 +1,5 @@
 ﻿@page "/"
+
 @using task_management.Shared.Models
 @using task_management.Web.Services
 @rendermode InteractiveServer
@@ -6,9 +7,9 @@
 
 <PageTitle>Dashboard</PageTitle>
 
-<h1 style="text-align: center;">Dashboard</h1>
+<h1>Dashboard</h1>
 
-<FluentStack Style="margin-bottom: 24px;" VerticalAlignment="VerticalAlignment.Center">
+<FluentStack Style="margin-bottom: 24px; visibility: hidden " VerticalAlignment="VerticalAlignment.Center">
     <FluentLabel>Justify</FluentLabel>
     <FluentSelect Items=@(Enum.GetValues<JustifyContent>()) OptionValue="@(c => c.ToAttributeValue())"
         TOption="JustifyContent" Position="SelectPosition.Below" @bind-SelectedOption="@Justification" />
@@ -16,102 +17,78 @@
     <FluentSlider @bind-Value="@Spacing" Min="0" Max="10" Step="1" Style="max-width: 300px; margin-top: 18px;" />
 </FluentStack>
 
-<FluentGrid Spacing="@Spacing" Justify="@Justification"
-    OnBreakpointEnter="@OnBreakpointEnterHandler" AdaptiveRendering="true">
+@if (categories == null)
+{
+    <FluentProgressRing />
+}
+else
+{
 
-    <FluentGridItem xs="6" sm="3">
-        <FluentCard>
-            <FluentStack Orientation="Orientation.Vertical" HorizontalAlignment="HorizontalAlignment.Center"
-                VerticalAlignment="VerticalAlignment.Center">
-                <FluentIcon Value="@(new Icons.Regular.Size24.TaskListAdd())" />
-                <FluentLabel Typo="Typography.H4" Style="text-align: center;">Total Tasks</FluentLabel>
-                <FluentLabel Typo="Typography.H5" Style="text-align: center;">24</FluentLabel>
-            </FluentStack>
-        </FluentCard>
-    </FluentGridItem>
-    <FluentGridItem xs="6" sm="3">
-        <FluentCard>
-            <FluentStack Orientation="Orientation.Vertical" HorizontalAlignment="HorizontalAlignment.Center"
-                VerticalAlignment="VerticalAlignment.Center">
-                <FluentIcon Value="@(new Icons.Regular.Size24.ArrowSync())" />
-                <FluentLabel Typo="Typography.H4" Style="text-align: center;">In Progress</FluentLabel>
-                <FluentLabel Typo="Typography.H5" Style="text-align: center;">8</FluentLabel>
-            </FluentStack>
-        </FluentCard>
-    </FluentGridItem>
-    <FluentGridItem xs="6" sm="3">
-        <FluentCard>
-            <FluentStack Orientation="Orientation.Vertical" HorizontalAlignment="HorizontalAlignment.Center"
-                VerticalAlignment="VerticalAlignment.Center">
-                <FluentIcon Value="@(new Icons.Regular.Size24.CheckmarkCircle())" />
-                <FluentLabel Typo="Typography.H4">Completed</FluentLabel>
-                <FluentLabel Typo="Typography.H5">16</FluentLabel>
-            </FluentStack>
-        </FluentCard>
-    </FluentGridItem>
-    @* <FluentGridItem xs="12"> *@
-    @*     <FluentCard> *@
-    @*         <FluentDataGrid TGridItem="SalesRecord" Items="@salesData" GridTemplateColumns="1fr 1fr 1fr" *@
-    @*             ResizableColumns="true" Sortable="true"> *@
-    @*             <PropertyColumn Title="Product" Property="@(item => item.Product)" /> *@
-    @*             <PropertyColumn Title="Quantity Sold" Property="@(item => item.QuantitySold)" /> *@
-    @*             <PropertyColumn Title="Revenue" Property="@(item => item.Revenue)" /> *@
-    @*         </FluentDataGrid> *@
-    @*     </FluentCard> *@
-    @* </FluentGridItem> *@
-</FluentGrid>
+    <FluentGrid Spacing="@Spacing" Justify="@Justification" OnBreakpointEnter="@OnBreakpointEnterHandler"
+        AdaptiveRendering="true">
 
-@* Second Row of Cards *@
-<FluentGrid Spacing="@Spacing" Justify="@Justification">
-    <FluentGridItem xs="6" sm="3">
-        <FluentCard>
-            <FluentStack Orientation="Orientation.Vertical" VerticalAlignment="VerticalAlignment.Center"
-                HorizontalAlignment="HorizontalAlignment.Center">
-                <FluentIcon Value="@(new Icons.Regular.Size24.CalendarClock())" />
-                <FluentLabel Typo="Typography.H4">Due Today</FluentLabel>
-                <FluentLabel Typo="Typography.H5">5</FluentLabel>
-            </FluentStack>
-        </FluentCard>
-    </FluentGridItem>
+        @foreach (var category in categories)
+        {
+            <FluentGridItem xs="6" sm="3">
+                <FluentCard>
+                    <FluentStack Orientation="Orientation.Vertical" HorizontalAlignment="HorizontalAlignment.Center"
+                        VerticalAlignment="VerticalAlignment.Center">
+                        <FluentIcon Value="@(new Icons.Regular.Size24.Folder())" />
+                        <FluentLabel Typo="Typography.H4" Style="text-align: center;">@category.Name</FluentLabel>
 
-    <FluentGridItem xs="6" sm="3">
-        <FluentCard>
-            <FluentStack Orientation="Orientation.Vertical" VerticalAlignment="VerticalAlignment.Center"
-                HorizontalAlignment="HorizontalAlignment.Center">
-                <FluentIcon Value="@(new Icons.Regular.Size24.Alert())" />
-                <FluentLabel Typo="Typography.H4">High Priority</FluentLabel>
-                <FluentLabel Typo="Typography.H5">3</FluentLabel>
-            </FluentStack>
-        </FluentCard>
-    </FluentGridItem>
+                        <FluentStack Orientation="Orientation.Horizontal" HorizontalAlignment="HorizontalAlignment.Center">
+                            <FluentIcon Value="@(new Icons.Regular.Size24.TaskListAdd())" />
+                            <FluentLabel Typo="Typography.H5">@category.Tasks.Count Tasks</FluentLabel>
+                        </FluentStack>
 
-    <FluentGridItem xs="6" sm="3">
-        <FluentCard>
-            <FluentStack Orientation="Orientation.Vertical" VerticalAlignment="VerticalAlignment.Center"
-                HorizontalAlignment="HorizontalAlignment.Center">
-                <FluentIcon Value="@(new Icons.Regular.Size24.ClockAlarm())" />
-                <FluentLabel Typo="Typography.H4">Overdue</FluentLabel>
-                <FluentLabel Typo="Typography.H5">2</FluentLabel>
-            </FluentStack>
-        </FluentCard>
-    </FluentGridItem>
+                        <FluentStack Orientation="Orientation.Horizontal" HorizontalAlignment="HorizontalAlignment.Center">
+                            <FluentIcon Value="@(new Icons.Regular.Size24.ArrowSync())" />
+                            <FluentLabel Typo="Typography.H5">
+                                @category.Tasks.Count(t => t.Status == TaskItemStatus.InProgress) In Progress
+                            </FluentLabel>
+                        </FluentStack>
 
-    <FluentGridItem xs="6" sm="3">
-        <FluentCard>
-            <FluentStack Orientation="Orientation.Vertical" VerticalAlignment="VerticalAlignment.Center"
-                HorizontalAlignment="HorizontalAlignment.Center">
-                <FluentIcon Value="@(new Icons.Regular.Size24.People())" />
-                <FluentLabel Typo="Typography.H4">Team Tasks</FluentLabel>
-                <FluentLabel Typo="Typography.H5">12</FluentLabel>
-            </FluentStack>
-        </FluentCard>
-    </FluentGridItem>
-</FluentGrid>
+                        <FluentStack Orientation="Orientation.Horizontal" HorizontalAlignment="HorizontalAlignment.Center">
+                            <FluentIcon Value="@(new Icons.Regular.Size24.CheckmarkCircle())" />
+                            <FluentLabel Typo="Typography.H5">
+                                @category.Tasks.Count(t => t.Status == TaskItemStatus.Done) Completed
+                            </FluentLabel>
+                        </FluentStack>
+
+                        <FluentStack Orientation="Orientation.Horizontal" HorizontalAlignment="HorizontalAlignment.Center">
+                            <FluentIcon Value="@(new Icons.Regular.Size24.Alert())" />
+                            <FluentLabel Typo="Typography.H5">
+                                @category.Tasks.Count(t => t.Priority == TaskItemPriority.High) High Priority
+                            </FluentLabel>
+                        </FluentStack>
+
+                        <FluentStack Orientation="Orientation.Horizontal" HorizontalAlignment="HorizontalAlignment.Center">
+                            <FluentIcon Value="@(new Icons.Regular.Size24.ClockAlarm())" />
+                            <FluentLabel Typo="Typography.H5">
+                                @category.Tasks.Count(t => t.DueDate.HasValue && t.DueDate.Value.Date < DateTime.Today) Overdue
+                            </FluentLabel>
+                        </FluentStack>
+                    </FluentStack>
+                </FluentCard>
+            </FluentGridItem>
+        }
+        @* <FluentGridItem xs="12"> *@
+        @*     <FluentCard> *@
+        @*         <FluentDataGrid TGridItem="SalesRecord" Items="@salesData" GridTemplateColumns="1fr 1fr 1fr" *@
+        @*             ResizableColumns="true" Sortable="true"> *@
+        @*             <PropertyColumn Title="Product" Property="@(item => item.Product)" /> *@
+        @*             <PropertyColumn Title="Quantity Sold" Property="@(item => item.QuantitySold)" /> *@
+        @*             <PropertyColumn Title="Revenue" Property="@(item => item.Revenue)" /> *@
+        @*         </FluentDataGrid> *@
+        @*     </FluentCard> *@
+        @* </FluentGridItem> *@
+    </FluentGrid>
+}
 
 @code {
 
     private CategoryDto[] categories;
-    
+
     JustifyContent Justification = JustifyContent.SpaceEvenly;
     int Spacing = 3;
 
