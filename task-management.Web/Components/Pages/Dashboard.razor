@@ -1,4 +1,4 @@
-﻿@page "/"
+@page "/"
 
 @using task_management.Shared.Models
 @using task_management.Web.Services
@@ -9,12 +9,12 @@
 
 <h1>Dashboard</h1>
 
-<FluentStack Style="margin-bottom: 24px; visibility: hidden " VerticalAlignment="VerticalAlignment.Center">
-    <FluentLabel>Justify</FluentLabel>
-    <FluentSelect Items=@(Enum.GetValues<JustifyContent>()) OptionValue="@(c => c.ToAttributeValue())"
-        TOption="JustifyContent" Position="SelectPosition.Below" @bind-SelectedOption="@Justification" />
-    <FluentLabel>Spacing</FluentLabel>
-    <FluentSlider @bind-Value="@Spacing" Min="0" Max="10" Step="1" Style="max-width: 300px; margin-top: 18px;" />
+<FluentStack Style="margin: 24px 0;" VerticalAlignment="VerticalAlignment.Center">
+    <FluentText Typo="Typography.H3" Style="flex: 1;">Task Overview</FluentText>
+<FluentButton Appearance="Appearance.Accent" Style="margin-left: auto;" Class="mobile-fab">
+        <FluentIcon Value="@(new Icons.Regular.Size24.Add())" />
+        New Task
+    </FluentButton>
 </FluentStack>
 
 @if (categories == null)
@@ -24,31 +24,33 @@
 else
 {
 
-    <FluentGrid Spacing="@Spacing" Justify="@Justification" OnBreakpointEnter="@OnBreakpointEnterHandler"
-        AdaptiveRendering="true">
+<FluentGrid Spacing="3" Justify="JustifyContent.SpaceEvenly" OnBreakpointEnter="@OnBreakpointEnterHandler"
+        AdaptiveRendering="true" Style="margin-bottom: 24px;">
 
         @foreach (var category in categories)
         {
-            <FluentGridItem xs="12">
-                    <FluentStack Orientation="Orientation.Vertical" HorizontalAlignment="HorizontalAlignment.Center"
-                        VerticalAlignment="VerticalAlignment.Center">
-                        <FluentIcon Value="@(new Icons.Regular.Size24.Folder())" />
-                        <FluentLabel Typo="Typography.H4" Style="text-align: center;">@category.Name</FluentLabel>
-                    </FluentStack>
+<FluentGridItem xs="12">
+<FluentCard Style="padding: 16px;" Class="hover-card">
+        <FluentStack Orientation="Orientation.Horizontal" HorizontalAlignment="HorizontalAlignment.Start"
+            VerticalAlignment="VerticalAlignment.Center" Style="gap: 12px;">
+            <FluentIcon Value="@(new Icons.Regular.Size24.Folder())" Style="color: var(--accent-fill-rest);" />
+            <FluentText Typo="Typography.H4">@category.Name</FluentText>
+        </FluentStack>
+    </FluentCard>
+</FluentGridItem>
+
+            <FluentGridItem xs="6" sm="3">
+<FluentCard Style="height: 100%;" Class="hover-card">
+    <FluentStack Orientation="Orientation.Vertical" HorizontalAlignment="HorizontalAlignment.Center"
+        VerticalAlignment="VerticalAlignment.Center" Style="gap: 12px; padding: 16px;">
+        <FluentIcon Value="@(new Icons.Regular.Size24.TaskListAdd())" Style="font-size: 32px;" />
+        <FluentText Typo="Typography.H5" Style="text-align: center;">@category.Tasks.Count Tasks</FluentText>
+    </FluentStack>
+</FluentCard>
             </FluentGridItem>
 
             <FluentGridItem xs="6" sm="3">
-                <FluentCard>
-                    <FluentStack Orientation="Orientation.Vertical" HorizontalAlignment="HorizontalAlignment.Center"
-                        VerticalAlignment="VerticalAlignment.Center">
-                        <FluentIcon Value="@(new Icons.Regular.Size24.TaskListAdd())" />
-                        <FluentLabel Typo="Typography.H5">@category.Tasks.Count Tasks</FluentLabel>
-                    </FluentStack>
-                </FluentCard>
-            </FluentGridItem>
-
-            <FluentGridItem xs="6" sm="3">
-                <FluentCard>
+<FluentCard Class="hover-card">
                     <FluentStack Orientation="Orientation.Vertical" HorizontalAlignment="HorizontalAlignment.Center"
                         VerticalAlignment="VerticalAlignment.Center">
                         <FluentIcon Value="@(new Icons.Regular.Size24.ArrowSync())" />
@@ -94,7 +96,55 @@ else
                     </FluentStack>
                 </FluentCard>
             </FluentGridItem>
+}
+
+<style>
+    .hover-card {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .hover-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+    }
+
+    .mobile-fab {
+        display: none;
+    }
+
+    @@media (max-width: 768px) {
+        .mobile-fab {
+            display: block;
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 100;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            padding: 0;
         }
+
+        .mobile-fab fluent-icon {
+            margin: 0;
+        }
+
+        .mobile-fab::part(control) {
+            border-radius: 50%;
+        }
+
+        fluent-grid-item {
+            margin-bottom: 12px;
+        }
+
+        .hover-card:hover {
+            transform: none;
+            box-shadow: none;
+        }
+    }
+</style>
     </FluentGrid>
 }
 
