@@ -1,0 +1,60 @@
+@using task_management.Shared.Models
+@using Microsoft.AspNetCore.Components
+@using Microsoft.FluentUI.AspNetCore.Components
+@using task_management.Web.Components.Pages
+
+@implements IDialogContentComponent<CategoryEditModel>
+
+@inject IDialogService DialogService
+
+@* Header *@
+<FluentDialogHeader ShowDismiss="true">
+    <FluentStack VerticalAlignment="VerticalAlignment.Center">
+        <FluentIcon Value="@(new Icons.Regular.Size24.Bookmark())" />
+        <FluentLabel Typo="Typography.PaneHeader">
+            @Dialog.Instance.Parameters.Title
+        </FluentLabel>
+    </FluentStack>
+</FluentDialogHeader>
+
+@* Footer *@
+<FluentDialogFooter>
+    <FluentButton Appearance="Appearance.Accent" OnClick="@SaveAsync">Save</FluentButton>
+    <FluentButton Appearance="Appearance.Neutral" OnClick="@CancelAsync">Cancel</FluentButton>
+</FluentDialogFooter>
+
+@* Body *@
+<FluentDialogBody>
+    <FluentTextField @bind-Value="@Content.Name">Name:</FluentTextField>
+    <FluentTextArea @bind-Value="@Content.Description">Description:</FluentTextArea>
+</FluentDialogBody>
+
+@code {
+    [Parameter]
+    public CategoryEditModel Content { get; set; } = new();
+
+    [CascadingParameter]
+    public FluentDialog Dialog { get; set; } = default!;
+
+    private async Task SaveAsync()
+    {
+        // Basic validation
+        if (string.IsNullOrWhiteSpace(Content.Name))
+        {
+            return;
+        }
+
+        await Dialog.CloseAsync(new CategoryDto(
+        Content.Id,
+        Content.Name,
+        Content.Description,
+        new(),
+        DateTime.UtcNow
+        ));
+    }
+
+    private async Task CancelAsync()
+    {
+        await Dialog.CancelAsync();
+    }
+}

@@ -19,25 +19,26 @@ else
 {
     <FluentDataGrid Id="categoriesgrid" Items="@categories" GridTemplateColumns="1fr 1fr 1fr 2fr" TGridItem="CategoryDto">
         <ChildContent>
-            <PropertyColumn Title="Id" Property="@(c => c!.Id)" Sortable="true" Align="Align.Start"/>
-            <PropertyColumn Title="Name" Property="@(c => c!.Name)" Sortable="true" Align="Align.Start"/>
-            <PropertyColumn Title="Description" Property="@(c => c!.Description)" Sortable="true" Align="Align.Start"/>
-            <PropertyColumn Title="Task Count" Property="@(c => c!.Tasks.Count)" Sortable="true" Align="Align.Center"/>
-            <PropertyColumn Title="Created" Property="@(c => c!.CreatedAt)" Sortable="true" Align="Align.End"/>
+            <PropertyColumn Title="Id" Property="@(c => c!.Id)" Sortable="true" Align="Align.Start" />
+            <PropertyColumn Title="Name" Property="@(c => c!.Name)" Sortable="true" Align="Align.Start" />
+            <PropertyColumn Title="Description" Property="@(c => c!.Description)" Sortable="true" Align="Align.Start" />
+            <PropertyColumn Title="Task Count" Property="@(c => c!.Tasks.Count)" Sortable="true" Align="Align.Center" />
+            <PropertyColumn Title="Created" Property="@(c => c!.CreatedAt)" Sortable="true" Align="Align.End" />
         </ChildContent>
         <EmptyContent>
-            <FluentIcon Value="@(new Icons.Filled.Size24.Crown())" Color="@Color.Accent"/>&nbsp; Nothing to see here. Carry on!
+            <FluentIcon Value="@(new Icons.Filled.Size24.Crown())" Color="@Color.Accent" />&nbsp; Nothing to see here. Carry
+            on!
         </EmptyContent>
         <LoadingContent>
             <FluentStack Orientation="Orientation.Vertical" HorizontalAlignment="HorizontalAlignment.Center">
-                Loading...<br/>
-                <FluentProgress Width="240px"/>
+                Loading...<br />
+                <FluentProgress Width="240px" />
             </FluentStack>
         </LoadingContent>
     </FluentDataGrid>
-    
+
     <FluentStack Orientation="Orientation.Horizontal" HorizontalAlignment="HorizontalAlignment.Center">
-        <FluentButton Icon="@(new Icons.Filled.Size24.Add())" Text="Add Category" OnClick="AddCategory"/>
+        <FluentButton Icon="@(new Icons.Filled.Size24.Add())" Text="Add Category" OnClick="AddCategory" />
     </FluentStack>
 }
 
