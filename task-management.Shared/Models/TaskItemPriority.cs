@@ -1,4 +1,4 @@
-namespace task_management.ApiService.Models;
+namespace task_management.Shared.Models;
 
 public enum TaskItemPriority
 {

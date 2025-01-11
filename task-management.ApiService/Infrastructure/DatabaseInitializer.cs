@@ -1,5 +1,6 @@
 ﻿using Microsoft.Azure.Cosmos;
 using task_management.ApiService.Models;
+using task_management.Shared.Models;
 
 namespace task_management.ApiService.Infrastructure;
 
@@ -82,8 +83,8 @@ internal sealed class DatabaseInitializer(
                         Title = "Renew Car License",
                         Description = "Renew car license before expiry which is on 15th of this month",
                         DueDate = DateTime.UtcNow.AddDays(7),
-                        ItemStatus = TaskItemStatus.Todo,
-                        CreatedAt = DateTime.UtcNow
+                        Status = TaskItemStatus.Todo,
+                        CreatedAt = DateTime.UtcNow,
                     }
                 },
                 CreatedAt = DateTime.UtcNow

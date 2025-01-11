@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using task_management.Shared.Models;
 
 namespace task_management.ApiService.Models;
 
@@ -15,5 +16,3 @@ public class Category
     public string _etag { get; set; }
 }
 
-/// <summary> Category Data Transfer Object for the API </summary>
-public record CategoryDto(Guid Id,string Name, string Description, List<TaskItem> Tasks, DateTime CreatedAt, string? Etag = null);

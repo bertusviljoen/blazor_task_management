@@ -6,6 +6,7 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\task-management.ServiceDefaults\task-management.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\task-management.Shared\task-management.Shared.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Aspire.Microsoft.Azure.Cosmos" Version="9.0.0" />

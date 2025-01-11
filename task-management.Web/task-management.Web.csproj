@@ -5,7 +5,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Refit" Version="8.0.0" />
+    <PackageReference Include="Refit.HttpClientFactory" Version="8.0.0" />
     <ProjectReference Include="..\task-management.ServiceDefaults\task-management.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\task-management.Shared\task-management.Shared.csproj" />
     <PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.11.0" />
     <PackageReference Include="Microsoft.FluentUI.AspNetCore.Components.Icons" Version="4.11.0" />
   </ItemGroup>

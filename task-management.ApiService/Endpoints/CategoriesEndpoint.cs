@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Http.HttpResults;
 using task_management.ApiService.Infrastructure;
 using task_management.ApiService.Models;
+using task_management.Shared.Models;
 
 public static class CategoriesEndpoint
 {
