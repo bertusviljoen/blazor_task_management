@@ -4,6 +4,8 @@
 @using task_management.Shared.Models
 @using task_management.Web.Services
 @inject ICategoryService CategoryService
+@inject IDialogService DialogService
+
 
 <PageTitle>Categories</PageTitle>
 
@@ -17,28 +19,44 @@
 }
 else
 {
-    <FluentDataGrid Id="categoriesgrid" Items="@categories" GridTemplateColumns="1fr 1fr 1fr 2fr" TGridItem="CategoryDto">
+    <FluentDataGrid Id="categoriesgrid" 
+                    Items="@categories" 
+                    GridTemplateColumns="1fr 1fr 1fr 1fr 1fr 1fr" 
+                    TGridItem="CategoryDto"
+                    SelectMode="DataGridSelectMode.Single"
+                    SelectFromEntireRow="true"
+                    >
         <ChildContent>
-            <PropertyColumn Title="Id" Property="@(c => c!.Id)" Sortable="true" Align="Align.Start" />
-            <PropertyColumn Title="Name" Property="@(c => c!.Name)" Sortable="true" Align="Align.Start" />
-            <PropertyColumn Title="Description" Property="@(c => c!.Description)" Sortable="true" Align="Align.Start" />
-            <PropertyColumn Title="Task Count" Property="@(c => c!.Tasks.Count)" Sortable="true" Align="Align.Center" />
-            <PropertyColumn Title="Created" Property="@(c => c!.CreatedAt)" Sortable="true" Align="Align.End" />
+            @* <SelectColumn *@
+            @*     TGridItem="CategoryDto" *@
+            @*     SelectMode="DataGridSelectMode.Single" *@
+            @*      *@
+            @* /> *@
+            <PropertyColumn Title="Id" Property="@(c => c!.Id)" Sortable="true" Align="Align.Start"/>
+            <PropertyColumn Title="Name" Property="@(c => c!.Name)" Sortable="true" Align="Align.Start"/>
+            <PropertyColumn Title="Description" Property="@(c => c!.Description)" Sortable="true" Align="Align.Start"/>
+            <PropertyColumn Title="Task Count" Property="@(c => c!.Tasks.Count)" Sortable="true" Align="Align.Center"/>
+            <PropertyColumn Title="Created" Property="@(c => c!.CreatedAt)" Sortable="true" Align="Align.End"/>
+            <TemplateColumn Title="Actions" Align="@Align.End" >
+                <FluentButton aria-label="Edit item" IconEnd="@(new Icons.Regular.Size16.Edit())"
+                              OnClick="@(() => OpenEditDialog(context))"/>
+                <FluentButton aria-label="Delete item" IconEnd="@(new Icons.Regular.Size16.Delete())" OnClick="@(() => { })"/>
+            </TemplateColumn>
         </ChildContent>
         <EmptyContent>
-            <FluentIcon Value="@(new Icons.Filled.Size24.Crown())" Color="@Color.Accent" />&nbsp; Nothing to see here. Carry
+            <FluentIcon Value="@(new Icons.Filled.Size24.Crown())" Color="@Color.Accent"/>&nbsp; Nothing to see here. Carry
             on!
         </EmptyContent>
         <LoadingContent>
             <FluentStack Orientation="Orientation.Vertical" HorizontalAlignment="HorizontalAlignment.Center">
-                Loading...<br />
-                <FluentProgress Width="240px" />
+                Loading...<br/>
+                <FluentProgress Width="240px"/>
             </FluentStack>
         </LoadingContent>
     </FluentDataGrid>
 
     <FluentStack Orientation="Orientation.Horizontal" HorizontalAlignment="HorizontalAlignment.Center">
-        <FluentButton Icon="@(new Icons.Filled.Size24.Add())" Text="Add Category" OnClick="AddCategory" />
+        <FluentButton Icon="@(new Icons.Filled.Size24.Add())" Text="Add Category" />
     </FluentStack>
 }
 
@@ -46,9 +64,8 @@ else
 @code {
     private FluentDataGrid<CategoryDto>? grid;
     private IQueryable<CategoryDto>? categories;
-    private SelectedCategoryDto? currentCategory;
+    private CategoryDto? SelectedCategoryDto;
     private bool isEditMode = false;
-    private bool isModalOpen = false;
 
     protected override async Task OnInitializedAsync()
     {
@@ -60,36 +77,36 @@ else
         var result = await CategoryService.GetAllCategoriesAsync();
         return result.AsQueryable();
     }
-
-    private void AddCategory()
+    
+    private async Task OpenEditDialog(CategoryDto categoryDto)
     {
-        currentCategory = new SelectedCategoryDto();
-        isEditMode = false;
-        isModalOpen = true;
-    }
-
-    private void EditCategory(CategoryDto category)
-    {
-        currentCategory = new SelectedCategoryDto(category);
-        isEditMode = true;
-        isModalOpen = true;
-    }
-
-    private async Task SaveCategory()
-    {
-        if (currentCategory != null)
+        var dialog = 
+            await DialogService.ShowDialogAsync<CategoryEditDialog>(
+            new CategoryEditModel   
+            {
+                
+                    Id = categoryDto.Id,
+                    Name = categoryDto.Name,
+                    Description = categoryDto.Description
+            },
+            new DialogParameters()
+            {
+                Width = "480px",
+                Height = "240px",
+                Title = $"Updating the {categoryDto.Name} sheet",
+                PreventDismissOnOverlayClick = true,
+                PreventScroll = true,
+            });
+        
+        var result = await dialog.Result;
+        if (!result.Cancelled && result.Data != null)
         {
-            if (isEditMode)
+            var updatedCategory = result.Data as CategoryDto;
+            if (updatedCategory != null)
             {
-                await CategoryService.UpdateCategoryAsync(currentCategory.Id, currentCategory.ToCategoryDto());
+                await CategoryService.UpdateCategoryAsync(updatedCategory.Id, updatedCategory);
+                categories = await GetFromApi();
             }
-            else
-            {
-                await CategoryService.CreateCategoryAsync(currentCategory.ToCategoryDto());
-            }
-
-            categories = await GetFromApi();
-            isModalOpen = false;
         }
     }
 
@@ -97,10 +114,5 @@ else
     {
         await CategoryService.DeleteCategoryAsync(category.Id);
         categories = await GetFromApi();
-    }
-
-    private void CloseModal()
-    {
-        isModalOpen = false;
     }
 }
