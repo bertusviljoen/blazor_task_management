@@ -3,7 +3,6 @@ using task_management.Web.Components;
 using Microsoft.FluentUI.AspNetCore.Components;
 using System.Text.Json;
 using Microsoft.AspNetCore.Http.Json;
-using Refit;
 using task_management.Web.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -32,8 +31,7 @@ builder.Services.AddHttpClient<WeatherApiClient>(client =>
         client.BaseAddress = new("https+http://apiservice");
     });
 
-builder.Services.AddRefitClient<ICategoryApi>()
-    .ConfigureHttpClient(client =>
+builder.Services.AddHttpClient<ICategoryService, ClientCategoryService>(client =>
     {
         client.BaseAddress = new("https+http://apiservice");
     });

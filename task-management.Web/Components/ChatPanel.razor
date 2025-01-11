@@ -1,13 +1,13 @@
 @inject NavigationManager Navigation
 
-<FluentStack Orientation="Orientation.Vertical" Class="chat-panel">
+<FluentStack Orientation="Orientation.Vertical" Class="chat-panel" Style="width: 30%; position: fixed; right: 0;">
     <FluentButton Appearance="Appearance.Stealth" @onclick="ToggleChat">
         <FluentIcon Value="@(new Icons.Regular.Size24.Chat())" />
     </FluentButton>
 
     @if (isOpen)
     {
-        <FluentStack Orientation="Orientation.Vertical" Class="chat-content">
+        <FluentStack Orientation="Orientation.Vertical" Class="chat-content" Style="height: 100vh;">
             <FluentTextField @bind-Value="message" Placeholder="Type a message..." />
             <FluentButton Appearance="Appearance.Accent" @onclick="SendMessage">Send</FluentButton>
         </FluentStack>
