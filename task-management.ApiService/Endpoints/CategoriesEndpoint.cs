@@ -11,7 +11,6 @@ public static class CategoriesEndpoint
 
         group.MapGet("/", async (IDataContext db, CancellationToken token) =>
         {
-            await Task.Delay(1000, token);
             var repository = db.Set<Category>();
             var items = await repository.GetAllAsync((category => Guid.Empty != category.Id), token);
             return TypedResults.Ok(items.Select(a => new CategoryDto(a.Id, a.Name, a.Description, a.Tasks, a.CreatedAt, a._etag)));

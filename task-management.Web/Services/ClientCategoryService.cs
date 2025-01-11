@@ -12,7 +12,7 @@ public class ClientCategoryService(HttpClient http) : ICategoryService
         return await http.GetFromJsonAsync<IEnumerable<CategoryDto>>("api/Category") ?? [];
     }
 
-    public async Task<CategoryDto> GetCategoryByIdAsync(string id)
+    public async Task<CategoryDto> GetCategoryByIdAsync(Guid id)
     {
         var response = await http.GetAsync($"api/Category/{id}");
         response.EnsureSuccessStatusCode();
@@ -20,7 +20,7 @@ public class ClientCategoryService(HttpClient http) : ICategoryService
             ?? throw new Exception("Category not found");
     }
 
-    public async Task UpdateCategoryAsync(string id, CategoryDto category)
+    public async Task UpdateCategoryAsync(Guid id, CategoryDto category)
     {
         await http.PutAsJsonAsync($"api/Category/{id}", category);
     }
@@ -30,7 +30,7 @@ public class ClientCategoryService(HttpClient http) : ICategoryService
         await http.PostAsJsonAsync("api/Category", category);
     }
 
-    public async Task DeleteCategoryAsync(string id)
+    public async Task DeleteCategoryAsync(Guid id)
     {
         await http.DeleteAsync($"api/Category/{id}");
     }

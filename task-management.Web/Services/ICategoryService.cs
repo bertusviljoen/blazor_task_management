@@ -7,8 +7,8 @@ namespace task_management.Web.Services;
 public interface ICategoryService
 {
     Task<IEnumerable<CategoryDto>> GetAllCategoriesAsync();
-    Task<CategoryDto> GetCategoryByIdAsync(string id);
-    Task UpdateCategoryAsync(string id, CategoryDto category);
+    Task<CategoryDto> GetCategoryByIdAsync(Guid id);
+    Task UpdateCategoryAsync(Guid id, CategoryDto category);
     Task CreateCategoryAsync(CategoryDto category);
-    Task DeleteCategoryAsync(string id);
+    Task DeleteCategoryAsync(Guid id);
 }
