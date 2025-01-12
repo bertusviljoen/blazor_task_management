@@ -58,102 +58,161 @@ else
 
                 <FluentCard Class="metric-card">
                     <div Style="padding: 16px; display: flex; flex-direction: column; gap: 12px;">
-                        <div class="icon-header">
-                            <FluentIcon Value="@(new Icons.Regular.Size20.Alert())" />
-                            <FluentLabel Typo="Typography.H6">Priority Overview</FluentLabel>
-                        </div>
-                        <div class="metric-row">
-                            <FluentIcon Value="@(new Icons.Regular.Size16.AlertUrgent())" Color="Color.Error" />
-                            <FluentLabel>High Priority: @board.Tasks.Count(t => t.Priority == TaskItemPriority.High)
+                        <div class="icon-header" style="display: flex; align-items: center; gap: 8px;">
+                            <FluentLabel Typo="Typography.H4" Underline="true">
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    Priority Overview
+                                </div>
                             </FluentLabel>
                         </div>
-                        <div class="metric-row">
-                            <FluentIcon Value="@(new Icons.Regular.Size16.Alert())" Color="Color.Warning" />
-                            <FluentLabel>Medium Priority: @board.Tasks.Count(t => t.Priority == TaskItemPriority.Medium)
+                        <div class="metric-row" style="display: flex; align-items: center; gap: 8px;">
+                            <FluentLabel>
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <FluentIcon Value="@(new Icons.Regular.Size16.AlertUrgent())" Color="Color.Error" />
+                                    High Priority: @board.Tasks.Count(t => t.Priority == TaskItemPriority.High)
+                                </div>
                             </FluentLabel>
                         </div>
-                        <div class="metric-row">
-                            <FluentIcon Value="@(new Icons.Regular.Size16.AlertSnooze())" Color="Color.Success" />
-                            <FluentLabel>Low Priority: @board.Tasks.Count(t => t.Priority == TaskItemPriority.Low)</FluentLabel>
-                        </div>
-                    </div>
-                </FluentCard>
-
-                <FluentCard Class="metric-card">
-                    <div Style="padding: 16px; display: flex; flex-direction: column; gap: 12px;">
-                        <div class="icon-header">
-                            <FluentIcon Value="@(new Icons.Regular.Size20.Calendar())" />
-                            <FluentLabel Typo="Typography.H6">Time Analysis</FluentLabel>
-                        </div>
-                        <div class="metric-row">
-                            <FluentIcon Value="@(new Icons.Regular.Size16.CalendarError())" Color="Color.Error" />
-                            <FluentLabel>Overdue Tasks: @board.Tasks.Count(t => t.DueDate.HasValue && t.DueDate.Value.Date <
-                        DateTime.Today)</FluentLabel>
-                        </div>
-                        <div class="metric-row">
-                            <FluentIcon Value="@(new Icons.Regular.Size16.CalendarToday())" Color="Color.Warning" />
-                            <FluentLabel>Due Today: @board.Tasks.Count(t => t.DueDate.HasValue && t.DueDate.Value.Date ==
-                        DateTime.Today)</FluentLabel>
-                        </div>
-                        <div class="metric-row">
-                            <FluentIcon Value="@(new Icons.Regular.Size16.CalendarWorkWeek())" />
-                            <FluentLabel>Due This Week: @board.Tasks.Count(t => t.DueDate.HasValue && t.DueDate.Value.Date <=
-                        DateTime.Today.AddDays(7))</FluentLabel>
-                        </div>
-                    </div>
-                </FluentCard>
-
-                <FluentCard Class="metric-card">
-                    <div Style="padding: 16px; display: flex; flex-direction: column; gap: 12px;">
-                        <div class="icon-header">
-                            <FluentIcon Value="@(new Icons.Regular.Size20.History())" />
-                            <FluentLabel Typo="Typography.H6">Recent Activity</FluentLabel>
-                        </div>
-                        <div class="metric-row">
-                            <FluentIcon Value="@(new Icons.Regular.Size16.ArrowSync())" />
-                            <FluentLabel>Active Tasks: @board.Tasks.Count(t => t.Status != TaskItemStatus.Done)</FluentLabel>
-                        </div>
-                        <div class="metric-row">
-                            <FluentIcon Value="@(new Icons.Regular.Size16.CheckmarkCircle())" />
-                            <FluentLabel>Completed Tasks: @board.Tasks.Count(t => t.Status == TaskItemStatus.Done)</FluentLabel>
-                        </div>
-                    </div>
-                </FluentCard>
-
-                <FluentCard Class="metric-card">
-                    <div Style="padding: 16px; display: flex; flex-direction: column; gap: 12px;">
-                        <div class="icon-header">
-                            <FluentIcon Value="@(new Icons.Regular.Size20.DataTrending())" />
-                            <FluentLabel Typo="Typography.H6">Performance</FluentLabel>
-                        </div>
-                        <div class="metric-row">
-                            <FluentIcon Value="@(new Icons.Regular.Size16.Flowchart())" />
-                            <FluentLabel>Completion Rate: @GetBoardCompletionRate(board)%</FluentLabel>
-                        </div>
-                        <div class="metric-row">
-                            <FluentIcon Value="@(new Icons.Regular.Size16.Timer())" />
-                            <FluentLabel>On-Time Completion: @GetBoardOnTimeCompletionRate(board)%</FluentLabel>
-                        </div>
-                    </div>
-                </FluentCard>
-
-                <FluentCard Class="metric-card">
-                    <div Style="padding: 16px; display: flex; flex-direction: column; gap: 12px;">
-                        <div class="icon-header">
-                            <FluentIcon Value="@(new Icons.Regular.Size20.Info())" />
-                            <FluentLabel Icon="@(new Icons.Regular.Size20.Info())" Typo="Typography.H6">Board Details
+                        <div class="metric-row" style="display: flex; align-items: center; gap: 8px;">
+                            <FluentLabel>
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <FluentIcon Value="@(new Icons.Regular.Size16.Alert())" Color="Color.Warning" />
+                                    Medium Priority: @board.Tasks.Count(t => t.Priority == TaskItemPriority.Medium)
+                                </div>
                             </FluentLabel>
                         </div>
-                        <div class="metric-row">
-                            <FluentIcon Value="@(new Icons.Regular.Size16.TextDescription())" />
-                            <FluentLabel>Description: @(board.Description ?? "No description")</FluentLabel>
+                        <div class="metric-row" style="display: flex; align-items: center; gap: 8px;">
+                            <FluentLabel>
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <FluentIcon Value="@(new Icons.Regular.Size16.AlertSnooze())" Color="Color.Success" />
+                                    Low Priority: @board.Tasks.Count(t => t.Priority == TaskItemPriority.Low)
+                                </div>
+                            </FluentLabel>
                         </div>
-                        <div class="metric-row">
-                            <FluentIcon Value="@(new Icons.Regular.Size16.Clock())" />
-                            <FluentLabel>Last Updated: @(board.Tasks.Any() ? board.Tasks.Max(t => t.DueDate)?.ToString("d") ??
-                        "N/A" : "N/A")</FluentLabel>
-                            </div>
+                    </div>
+                </FluentCard>
+
+                <FluentCard Class="metric-card">
+                    <div Style="padding: 16px; display: flex; flex-direction: column; gap: 12px;">
+                        <div class="icon-header" style="display: flex; align-items: center; gap: 8px;">
+                            <FluentLabel Typo="Typography.H4" Underline="true">
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    Time Analysis
+                                </div>
+                            </FluentLabel>
                         </div>
+                        <div class="metric-row" style="display: flex; align-items: center; gap: 8px;">
+                            <FluentLabel>
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <FluentIcon Value="@(new Icons.Regular.Size16.CalendarError())" Color="Color.Error" />
+                                    Overdue Tasks: @board.Tasks.Count(t => t.DueDate.HasValue && t.DueDate.Value.Date <
+                            DateTime.Today)
+                                </div>
+                            </FluentLabel>
+                        </div>
+                        <div class="metric-row" style="display: flex; align-items: center; gap: 8px;">
+                            <FluentLabel>
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <FluentIcon Value="@(new Icons.Regular.Size16.CalendarToday())" Color="Color.Warning" />
+                                    Due Today: @board.Tasks.Count(t => t.DueDate.HasValue && t.DueDate.Value.Date ==
+                                  DateTime.Today)
+                                </div>
+                            </FluentLabel>
+                        </div>
+                        <div class="metric-row" style="display: flex; align-items: center; gap: 8px;">
+                            <FluentLabel>
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <FluentIcon Value="@(new Icons.Regular.Size16.CalendarWorkWeek())" />
+                                    Due This Week: @board.Tasks.Count(t => t.DueDate.HasValue && t.DueDate.Value.Date <=
+                            DateTime.Today.AddDays(7))
+                                </div>
+                            </FluentLabel>
+                        </div>
+                    </div>
+                </FluentCard>
+
+                <FluentCard Class="metric-card">
+                    <div Style="padding: 16px; display: flex; flex-direction: column; gap: 12px;">
+                        <div class="icon-header" style="display: flex; align-items: center; gap: 8px;">
+                            <FluentLabel Typo="Typography.H4" Underline="true">
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    Recent Activity
+                                </div>
+                            </FluentLabel>
+                        </div>
+                        <div class="metric-row" style="display: flex; align-items: center; gap: 8px;">
+                            <FluentLabel>
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <FluentIcon Value="@(new Icons.Regular.Size16.ArrowSync())" />
+                                    Active Tasks: @board.Tasks.Count(t => t.Status != TaskItemStatus.Done)
+                                </div>
+                            </FluentLabel>
+                        </div>
+                        <div class="metric-row" style="display: flex; align-items: center; gap: 8px;">
+                            <FluentLabel>
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <FluentIcon Value="@(new Icons.Regular.Size16.CheckmarkCircle())" />
+                                    Completed Tasks: @board.Tasks.Count(t => t.Status == TaskItemStatus.Done)
+                                </div>
+                            </FluentLabel>
+                        </div>
+                    </div>
+                </FluentCard>
+
+                <FluentCard Class="metric-card">
+                    <div Style="padding: 16px; display: flex; flex-direction: column; gap: 12px;">
+                        <div class="icon-header" style="display: flex; align-items: center; gap: 8px;">
+                            <FluentLabel Typo="Typography.H4" Underline="true">
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    Performance
+                                </div>
+                            </FluentLabel>
+                        </div>
+                        <div class="metric-row" style="display: flex; align-items: center; gap: 8px;">
+                            <FluentLabel>
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <FluentIcon Value="@(new Icons.Regular.Size16.Flowchart())" />
+                                    Completion Rate: @GetBoardCompletionRate(board)%
+                                </div>
+                            </FluentLabel>
+                        </div>
+                        <div class="metric-row" style="display: flex; align-items: center; gap: 8px;">
+                            <FluentLabel>
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <FluentIcon Value="@(new Icons.Regular.Size16.Timer())" />
+                                    On-Time Completion: @GetBoardOnTimeCompletionRate(board)%
+                                </div>
+                            </FluentLabel>
+                        </div>
+                    </div>
+                </FluentCard>
+
+                <FluentCard Class="metric-card">
+                    <div Style="padding: 16px; display: flex; flex-direction: column; gap: 12px;">
+                        <div class="icon-header" style="display: flex; align-items: center; gap: 8px;">
+                            <FluentLabel Typo="Typography.H4" Underline="true">
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    Board Details
+                                </div>
+                            </FluentLabel>
+                        </div>
+                        <div class="metric-row" style="display: flex; align-items: center; gap: 8px;">
+                            <FluentLabel>
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <FluentIcon Value="@(new Icons.Regular.Size16.TextDescription())" />
+                                    Description: @(board.Description ?? "No description")
+                                </div>
+                            </FluentLabel>
+                        </div>
+                        <div class="metric-row" style="display: flex; align-items: center; gap: 8px;">
+                            <FluentLabel>
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <FluentIcon Value="@(new Icons.Regular.Size16.Clock())" />
+                                    Last Updated: @(board.Tasks.Any() ? board.Tasks.Max(t => t.DueDate)?.ToString("d") ?? "N/A" : "N/A")
+                                </div>
+                            </FluentLabel>
+                        </div>
+                    </div>
                     </FluentCard>
                 </div>
             </div>
