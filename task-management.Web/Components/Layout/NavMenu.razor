@@ -73,11 +73,13 @@
         if (!result.Cancelled && result.Data != null)
         {
             var newTaskBoard = result.Data as TaskBoardDto;
+            newTaskBoard = newTaskBoard with { Id = Guid.NewGuid() };
             if (newTaskBoard != null)
             {
                 await TaskBoardService.CreateTaskBoardAsync(newTaskBoard);
                 taskBoards = (await TaskBoardService.GetAllTaskBoardsAsync()).ToList();
                 ToastService.ShowSuccess("TaskBoard created successfully!");
+                StateHasChanged();
             }
         }
     }

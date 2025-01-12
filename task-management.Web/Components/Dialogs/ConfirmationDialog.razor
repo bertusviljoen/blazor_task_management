@@ -1,0 +1,36 @@
+@implements IDialogContentComponent
+
+@inject IDialogService DialogService
+
+<FluentDialog>
+    <FluentDialogHeader ShowDismiss="true">
+        <FluentStack VerticalAlignment="VerticalAlignment.Center">
+            <FluentIcon Value="@(new Icons.Regular.Size24.Bookmark())" />
+            <FluentLabel Typo="Typography.PaneHeader">
+                @Dialog.Instance.Parameters.Title
+            </FluentLabel>
+        </FluentStack>
+    </FluentDialogHeader>
+    <FluentDialogBody>
+        <p>@Message</p>
+    </FluentDialogBody>
+    <FluentDialogFooter>
+        <FluentButton OnClick="() => Confirm(true)">Yes</FluentButton>
+        <FluentButton OnClick="() => Confirm(false)">No</FluentButton>
+    </FluentDialogFooter>
+</FluentDialog>
+
+@code {
+    [CascadingParameter] public FluentDialog Dialog { get; set; }
+    [Parameter] public string Message { get; set; }
+
+    private async Task Confirm(bool result)
+    {
+        if (!result)
+            await Dialog.CloseAsync(false);
+        
+        await Dialog.CloseAsync(true);
+    }
+}
+
+
