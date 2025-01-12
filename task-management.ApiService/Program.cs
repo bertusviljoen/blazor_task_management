@@ -77,7 +77,7 @@ app.MapGet("/weatherforecast", () =>
 
 app.MapDefaultEndpoints();
 
-app.MapCategoryEndpoints();
+app.MapTaskBoardEndpoints();
 
 app.Run();
 

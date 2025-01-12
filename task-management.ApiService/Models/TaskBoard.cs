@@ -3,7 +3,7 @@ using task_management.Shared.Models;
 
 namespace task_management.ApiService.Models;
 
-public class Category
+public class TaskBoard
 {
     public Guid Id { get; set; } = Guid.NewGuid();
     public required string Name { get; set; } = string.Empty;
@@ -12,7 +12,6 @@ public class Category
     public DateTime CreatedAt { get; set; }
     public string PartitionKey => Id.ToString();
     public string id => Id.ToString();
-    
     public string _etag { get; set; }
 }
 

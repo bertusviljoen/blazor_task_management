@@ -3,7 +3,7 @@
 @using Microsoft.FluentUI.AspNetCore.Components
 @using task_management.Web.Components.Pages
 
-@implements IDialogContentComponent<CategoryEditModel>
+@implements IDialogContentComponent<TaskBoardEditModel>
 
 @inject IDialogService DialogService
 
@@ -31,7 +31,7 @@
 
 @code {
     [Parameter]
-    public CategoryEditModel Content { get; set; } = new();
+    public TaskBoardEditModel Content { get; set; } = new();
 
     [CascadingParameter]
     public FluentDialog Dialog { get; set; } = default!;
@@ -44,7 +44,7 @@
             return;
         }
 
-        await Dialog.CloseAsync(new CategoryDto(
+        await Dialog.CloseAsync(new TaskBoardDto(
         Content.Id,
         Content.Name,
         Content.Description,

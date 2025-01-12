@@ -9,5 +9,4 @@ public class TaskItem
     public TaskItemStatus Status { get; set; }
     public DateTime CreatedAt { get; set; }
     public DateTime? DueDate { get; set; }
-    public string? CategoryId { get; set; }
 }

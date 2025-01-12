@@ -1,6 +1,6 @@
 namespace task_management.Shared.Models;
 
-public record CategoryDto(
+public record TaskBoardDto(
     Guid Id,
     string Name,
     string Description,
@@ -8,7 +8,7 @@ public record CategoryDto(
     DateTime CreatedAt,
     string? Etag = null);
 
-public class SelectedCategoryDto
+public class SelectedTaskBoardDto
 {
     public Guid Id { get; set; } = Guid.NewGuid();
     public string Name { get; set; } = string.Empty;
@@ -17,23 +17,23 @@ public class SelectedCategoryDto
     public DateTime CreatedAt { get; set; }
     public string? Etag { get; set; } = null;
     
-    public SelectedCategoryDto(CategoryDto category)
+    public SelectedTaskBoardDto(TaskBoardDto taskBoard)
     {
-        Id = category.Id;
-        Name = category.Name;
-        Description = category.Description;
-        Tasks = category.Tasks;
-        CreatedAt = category.CreatedAt;
-        Etag = category.Etag;
+        Id = taskBoard.Id;
+        Name = taskBoard.Name;
+        Description = taskBoard.Description;
+        Tasks = taskBoard.Tasks;
+        CreatedAt = taskBoard.CreatedAt;
+        Etag = taskBoard.Etag;
     }
 
-    public SelectedCategoryDto()
+    public SelectedTaskBoardDto()
     {
         
     }
     
-    public CategoryDto ToCategoryDto()
+    public TaskBoardDto ToTaskBoardDto()
     {
-        return new CategoryDto(Id, Name, Description, Tasks, CreatedAt, Etag);
+        return new TaskBoardDto(Id, Name, Description, Tasks, CreatedAt, Etag);
     }
 }

@@ -1,34 +1,33 @@
-@page "/categories"
+@page "/taskboards"
 @rendermode InteractiveServer
 @attribute [OutputCache(Duration = 5)]
 @using task_management.Shared.Models
 @using task_management.Web.Services
-@inject ICategoryService CategoryService
+@inject ITaskBoardService TaskBoardService
 @inject IDialogService DialogService
 
 
-<PageTitle>Categories</PageTitle>
+<PageTitle>TaskBoards</PageTitle>
 
-<h3>Categories Management</h3>
+<h3>TaskBoards Management</h3>
 
-<p>This component allows you to manage categories.</p>
+<p>This component allows you to manage your task boards.</p>
 
-@if (categories == null)
+@if (taskBoards == null)
 {
     <p><em>Loading...</em></p>
 }
 else
 {
-    <FluentDataGrid Id="categoriesgrid" 
-                    Items="@categories" 
+    <FluentDataGrid Id="taskBoardsgrid" 
+                    Items="@taskBoards" 
                     GridTemplateColumns="1fr 1fr 1fr 1fr 1fr 1fr" 
-                    TGridItem="CategoryDto"
+                    TGridItem="TaskBoardDto"
                     SelectMode="DataGridSelectMode.Single"
                     SelectFromEntireRow="true"
                     >
-        <ChildContent>
             @* <SelectColumn *@
-            @*     TGridItem="CategoryDto" *@
+            @*     TGridItem="TaskBoardDto" *@
             @*     SelectMode="DataGridSelectMode.Single" *@
             @*      *@
             @* /> *@
@@ -42,58 +41,47 @@ else
                               OnClick="@(() => OpenEditDialog(context))"/>
                 <FluentButton aria-label="Delete item" IconEnd="@(new Icons.Regular.Size16.Delete())" OnClick="@(() => { })"/>
             </TemplateColumn>
-        </ChildContent>
-        <EmptyContent>
-            <FluentIcon Value="@(new Icons.Filled.Size24.Crown())" Color="@Color.Accent"/>&nbsp; Nothing to see here. Carry
-            on!
-        </EmptyContent>
-        <LoadingContent>
-            <FluentStack Orientation="Orientation.Vertical" HorizontalAlignment="HorizontalAlignment.Center">
-                Loading...<br/>
-                <FluentProgress Width="240px"/>
-            </FluentStack>
-        </LoadingContent>
     </FluentDataGrid>
 
     <FluentStack Orientation="Orientation.Horizontal" HorizontalAlignment="HorizontalAlignment.Center">
-        <FluentButton Icon="@(new Icons.Filled.Size24.Add())" Text="Add Category" />
+        <FluentButton Icon="@(new Icons.Filled.Size24.Add())" Text="Add TaskBoard" />
     </FluentStack>
 }
 
 
 @code {
-    private FluentDataGrid<CategoryDto>? grid;
-    private IQueryable<CategoryDto>? categories;
-    private CategoryDto? SelectedCategoryDto;
+    private FluentDataGrid<TaskBoardDto>? grid;
+    private IQueryable<TaskBoardDto>? taskBoards;
+    private TaskBoardDto? SelectedTaskBoardDto;
     private bool isEditMode = false;
 
     protected override async Task OnInitializedAsync()
     {
-        categories = await GetFromApi();
+        taskBoards = await GetFromApi();
     }
 
-    private async Task<IQueryable<CategoryDto>> GetFromApi()
+    private async Task<IQueryable<TaskBoardDto>> GetFromApi()
     {
-        var result = await CategoryService.GetAllCategoriesAsync();
+        var result = await TaskBoardService.GetAllTaskBoardsAsync();
         return result.AsQueryable();
     }
     
-    private async Task OpenEditDialog(CategoryDto categoryDto)
+    private async Task OpenEditDialog(TaskBoardDto taskBoardDto)
     {
         var dialog = 
-            await DialogService.ShowDialogAsync<CategoryEditDialog>(
-            new CategoryEditModel   
+            await DialogService.ShowDialogAsync<TaskBoardEditDialog>(
+            new TaskBoardEditModel   
             {
                 
-                    Id = categoryDto.Id,
-                    Name = categoryDto.Name,
-                    Description = categoryDto.Description
+                    Id = taskBoardDto.Id,
+                    Name = taskBoardDto.Name,
+                    Description = taskBoardDto.Description
             },
             new DialogParameters()
             {
                 Width = "480px",
                 Height = "240px",
-                Title = $"Updating the {categoryDto.Name} sheet",
+                Title = $"Updating the {taskBoardDto.Name} sheet",
                 PreventDismissOnOverlayClick = true,
                 PreventScroll = true,
             });
@@ -101,18 +89,18 @@ else
         var result = await dialog.Result;
         if (!result.Cancelled && result.Data != null)
         {
-            var updatedCategory = result.Data as CategoryDto;
-            if (updatedCategory != null)
+            var updatedTaskBoard = result.Data as TaskBoardDto;
+            if (updatedTaskBoard != null)
             {
-                await CategoryService.UpdateCategoryAsync(updatedCategory.Id, updatedCategory);
-                categories = await GetFromApi();
+                await TaskBoardService.UpdateTaskBoardAsync(updatedTaskBoard.Id, updatedTaskBoard);
+                taskBoards = await GetFromApi();
             }
         }
     }
 
-    private async Task DeleteCategory(CategoryDto category)
+    private async Task DeleteTaskBoard(TaskBoardDto taskBoard)
     {
-        await CategoryService.DeleteCategoryAsync(category.Id);
-        categories = await GetFromApi();
+        await TaskBoardService.DeleteTaskBoardAsync(taskBoard.Id);
+        taskBoards = await GetFromApi();
     }
 }

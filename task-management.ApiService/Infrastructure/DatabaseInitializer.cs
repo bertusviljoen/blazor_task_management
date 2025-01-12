@@ -39,7 +39,7 @@ internal sealed class DatabaseInitializer(
     private async Task InitializeDatabase()
     {
         var databaseName = configuration["CosmosDb:DatabaseName"] ?? "task-management-db";
-        var containerName = configuration["CosmosDb:ContainerName"] ?? nameof(Category);
+        var containerName = configuration["CosmosDb:ContainerName"] ?? nameof(TaskBoard);
 
         var database = cosmosClient.GetDatabase(databaseName);
 
@@ -57,7 +57,7 @@ internal sealed class DatabaseInitializer(
     {
         //ToDo: Have to do this better with Aspire. It is currently empty
         var databaseName = configuration["CosmosDb:DatabaseName"] ?? "task-management-db";
-        var containerName = configuration["CosmosDb:ContainerName"] ?? nameof(Category);
+        var containerName = configuration["CosmosDb:ContainerName"] ?? nameof(TaskBoard);
 
         var container = cosmosClient.GetContainer(databaseName, containerName);
         
@@ -71,9 +71,9 @@ internal sealed class DatabaseInitializer(
 
         logger.LogInformation("Seeding initial projects.");
 
-        var categories = new[]
+        var taskboards = new[]
         {
-            new Category {
+            new TaskBoard {
                 Name = "Personal",
                 Description = "Tasks related to personal life",
                 Tasks = new List<TaskItem>()
@@ -89,7 +89,7 @@ internal sealed class DatabaseInitializer(
                 },
                 CreatedAt = DateTime.UtcNow
             },
-            new Category {
+            new TaskBoard {
                 Name = "Work",
                 Description = "Tasks related to work",
                 Tasks = new List<TaskItem>(),
@@ -97,9 +97,9 @@ internal sealed class DatabaseInitializer(
             }
         };
 
-        foreach (var category in categories)
+        foreach (var taskBoard in taskboards)
         {
-            await container.CreateItemAsync(category);
+            await container.CreateItemAsync(taskBoard);
         }
     }
 }
