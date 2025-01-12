@@ -43,7 +43,7 @@ else
     </FluentDataGrid>
 
     <FluentStack Orientation="Orientation.Horizontal" HorizontalAlignment="HorizontalAlignment.Center">
-        <FluentButton Icon="@(new Icons.Filled.Size24.Add())" Text="Add TaskBoard" />
+        <FluentButton Icon="@(new Icons.Filled.Size24.Add())" Text="Add TaskBoard" OnClick="OpenAddTaskBoardDialog" />
     </FluentStack>
 }
 
@@ -101,5 +101,30 @@ else
     {
         await TaskBoardService.DeleteTaskBoardAsync(taskBoard.Id);
         taskBoards = await GetFromApi();
+    }
+
+    private async Task OpenAddTaskBoardDialog()
+    {
+        var dialog = await DialogService.ShowDialogAsync<TaskBoardEditDialog>(
+            new TaskBoardEditModel(),
+            new DialogParameters()
+            {
+                Width = "480px",
+                Height = "240px",
+                Title = "Add New TaskBoard",
+                PreventDismissOnOverlayClick = true,
+                PreventScroll = true,
+            });
+
+        var result = await dialog.Result;
+        if (!result.Cancelled && result.Data != null)
+        {
+            var newTaskBoard = result.Data as TaskBoardDto;
+            if (newTaskBoard != null)
+            {
+                await TaskBoardService.CreateTaskBoardAsync(newTaskBoard);
+                taskBoards = await GetFromApi();
+            }
+        }
     }
 }
