@@ -60,7 +60,7 @@ internal sealed class DatabaseInitializer(
         var containerName = configuration["CosmosDb:ContainerName"] ?? nameof(TaskBoard);
 
         var container = cosmosClient.GetContainer(databaseName, containerName);
-        
+
         var query = new QueryDefinition("SELECT VALUE COUNT(1) FROM c");
         var count = (await container.GetItemQueryIterator<int>(query).ReadNextAsync()).FirstOrDefault();
 
@@ -84,6 +84,43 @@ internal sealed class DatabaseInitializer(
                         Description = "Renew car license before expiry which is on 15th of this month",
                         DueDate = DateTime.UtcNow.AddDays(7),
                         Status = TaskItemStatus.Todo,
+                        Priority = TaskItemPriority.High,
+                        CreatedAt = DateTime.UtcNow,
+                    },
+                    new TaskItem()
+                    {
+                        Title = "Schedule Annual Health Checkup",
+                        Description = "Book appointment with Dr. Smith for annual physical examination",
+                        DueDate = DateTime.UtcNow.AddDays(14),
+                        Status = TaskItemStatus.Todo,
+                        Priority = TaskItemPriority.Medium,
+                        CreatedAt = DateTime.UtcNow,
+                    },
+                    new TaskItem()
+                    {
+                        Title = "Plan Weekend Grocery Shopping",
+                        Description = "Create shopping list and buy essentials for the week",
+                        DueDate = DateTime.UtcNow.AddDays(2),
+                        Status = TaskItemStatus.InProgress,
+                        Priority = TaskItemPriority.Low,
+                        CreatedAt = DateTime.UtcNow,
+                    },
+                    new TaskItem()
+                    {
+                        Title = "Pay Utility Bills",
+                        Description = "Pay electricity, water, and internet bills for the month",
+                        DueDate = DateTime.UtcNow.AddDays(5),
+                        Status = TaskItemStatus.Todo,
+                        Priority = TaskItemPriority.High,
+                        CreatedAt = DateTime.UtcNow,
+                    },
+                    new TaskItem()
+                    {
+                        Title = "Schedule Car Maintenance",
+                        Description = "Book appointment for oil change and general maintenance check",
+                        DueDate = DateTime.UtcNow.AddDays(10),
+                        Status = TaskItemStatus.Todo,
+                        Priority = TaskItemPriority.Medium,
                         CreatedAt = DateTime.UtcNow,
                     }
                 },
@@ -92,7 +129,63 @@ internal sealed class DatabaseInitializer(
             new TaskBoard {
                 Name = "Work",
                 Description = "Tasks related to work",
-                Tasks = new List<TaskItem>(),
+                Tasks = new List<TaskItem>()
+                {
+                    new TaskItem()
+                    {
+                        Title = "Complete Quarterly Report",
+                        Description = "Prepare and finalize Q3 performance report for management review",
+                        DueDate = DateTime.UtcNow.AddDays(3),
+                        Status = TaskItemStatus.InProgress,
+                        Priority = TaskItemPriority.High,
+                        CreatedAt = DateTime.UtcNow,
+                    },
+                    new TaskItem()
+                    {
+                        Title = "Team Performance Reviews",
+                        Description = "Conduct annual performance reviews for team members",
+                        DueDate = DateTime.UtcNow.AddDays(14),
+                        Status = TaskItemStatus.Todo,
+                        Priority = TaskItemPriority.High,
+                        CreatedAt = DateTime.UtcNow,
+                    },
+                    new TaskItem()
+                    {
+                        Title = "Update Project Documentation",
+                        Description = "Review and update technical documentation for the current sprint",
+                        DueDate = DateTime.UtcNow.AddDays(5),
+                        Status = TaskItemStatus.Todo,
+                        Priority = TaskItemPriority.Medium,
+                        CreatedAt = DateTime.UtcNow,
+                    },
+                    new TaskItem()
+                    {
+                        Title = "Client Meeting Preparation",
+                        Description = "Prepare presentation and demo for upcoming client meeting",
+                        DueDate = DateTime.UtcNow.AddDays(2),
+                        Status = TaskItemStatus.InProgress,
+                        Priority = TaskItemPriority.High,
+                        CreatedAt = DateTime.UtcNow,
+                    },
+                    new TaskItem()
+                    {
+                        Title = "Code Review",
+                        Description = "Review pull requests from the development team",
+                        DueDate = DateTime.UtcNow.AddDays(1),
+                        Status = TaskItemStatus.Todo,
+                        Priority = TaskItemPriority.Medium,
+                        CreatedAt = DateTime.UtcNow,
+                    },
+                    new TaskItem()
+                    {
+                        Title = "Weekly Team Sync",
+                        Description = "Prepare agenda and conduct weekly team status meeting",
+                        DueDate = DateTime.UtcNow.AddDays(4),
+                        Status = TaskItemStatus.Todo,
+                        Priority = TaskItemPriority.Medium,
+                        CreatedAt = DateTime.UtcNow,
+                    }
+                },
                 CreatedAt = DateTime.UtcNow
             }
         };
