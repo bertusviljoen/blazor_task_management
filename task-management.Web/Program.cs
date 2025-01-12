@@ -24,16 +24,24 @@ builder.Services.Configure<JsonOptions>(options =>
 
 builder.Services.AddOutputCache();
 
+//if we are building with aspire 
+var apiserviceBaseUrl = "https+http://apiservice";
+if (true)
+{
+    apiserviceBaseUrl = "https+http://localhost:7556";
+}
+
 builder.Services.AddHttpClient<WeatherApiClient>(client =>
     {
         // This URL uses "https+http://" to indicate HTTPS is preferred over HTTP.
         // Learn more about service discovery scheme resolution at https://aka.ms/dotnet/sdschemes.
-        client.BaseAddress = new("https+http://apiservice");
+        // client.BaseAddress = new("https+http://apiservice");
+        client.BaseAddress = new(apiserviceBaseUrl);
     });
 
 builder.Services.AddHttpClient<ITaskBoardService, ClientTaskBoardService>(client =>
     {
-        client.BaseAddress = new("https+http://apiservice");
+        client.BaseAddress = new(apiserviceBaseUrl);
     });
 
 var app = builder.Build();
