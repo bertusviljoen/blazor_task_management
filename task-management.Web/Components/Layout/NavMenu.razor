@@ -14,10 +14,60 @@
                            IconColor="Color.Accent">Weather</FluentNavLink>
             <FluentNavLink Href="taskboards" Icon="@(new Icons.Regular.Size20.Folder())"
                            IconColor="Color.Accent">TaskBoards</FluentNavLink>
+            <FluentDivider />
+            @if (taskBoards != null)
+            {
+                @foreach (var taskBoard in taskBoards)
+                {
+                    <FluentNavLink Href="@($"taskboards/{taskBoard.Id}")" Icon="@(new Icons.Regular.Size20.Folder())"
+                                   IconColor="Color.Accent">@taskBoard.Name</FluentNavLink>
+                }
+            }
+            <FluentButton Appearance="Appearance.Accent" OnClick="OpenAddTaskBoardDialog">
+                <FluentIcon Value="@(new Icons.Regular.Size20.Add())" />
+                Add TaskBoard
+            </FluentButton>
         </FluentNavMenu>
     </nav>
 </div>
 
 @code {
     private bool expanded = true;
+    private List<TaskBoardDto>? taskBoards;
+
+    [Inject]
+    private ITaskBoardService TaskBoardService { get; set; } = default!;
+
+    [Inject]
+    private IDialogService DialogService { get; set; } = default!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        taskBoards = (await TaskBoardService.GetAllTaskBoardsAsync()).ToList();
+    }
+
+    private async Task OpenAddTaskBoardDialog()
+    {
+        var dialog = await DialogService.ShowDialogAsync<TaskBoardEditDialog>(
+            new TaskBoardEditModel(),
+            new DialogParameters()
+            {
+                Width = "480px",
+                Height = "240px",
+                Title = "Add New TaskBoard",
+                PreventDismissOnOverlayClick = true,
+                PreventScroll = true,
+            });
+
+        var result = await dialog.Result;
+        if (!result.Cancelled && result.Data != null)
+        {
+            var newTaskBoard = result.Data as TaskBoardDto;
+            if (newTaskBoard != null)
+            {
+                await TaskBoardService.CreateTaskBoardAsync(newTaskBoard);
+                taskBoards = (await TaskBoardService.GetAllTaskBoardsAsync()).ToList();
+            }
+        }
+    }
 }
