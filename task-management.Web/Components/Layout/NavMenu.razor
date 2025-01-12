@@ -26,10 +26,9 @@
                                    IconColor="Color.Accent">@taskBoard.Name</FluentNavLink>
                 }
             }
-            <FluentButton Appearance="Appearance.Accent" OnClick="OpenAddTaskBoardDialog">
-                <FluentIcon Value="@(new Icons.Regular.Size20.Add())" />
+            <FluentNavLink Href="#" Icon="@(new Icons.Regular.Size20.Add())" IconColor="Color.Accent" OnClick="OpenAddTaskBoardDialog">
                 Add TaskBoard
-            </FluentButton>
+            </FluentNavLink>
         </FluentNavMenu>
     </nav>
 </div>
@@ -43,6 +42,9 @@
 
     [Inject]
     private IDialogService DialogService { get; set; } = default!;
+
+    [Inject]
+    private IToastService ToastService { get; set; } = default!;
 
     protected override async Task OnInitializedAsync()
     {
@@ -70,6 +72,7 @@
             {
                 await TaskBoardService.CreateTaskBoardAsync(newTaskBoard);
                 taskBoards = (await TaskBoardService.GetAllTaskBoardsAsync()).ToList();
+                ToastService.ShowSuccess("TaskBoard created successfully!");
             }
         }
     }
