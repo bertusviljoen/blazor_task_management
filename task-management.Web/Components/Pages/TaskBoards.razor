@@ -9,7 +9,7 @@
 
 <PageTitle>TaskBoards</PageTitle>
 
-<h3>TaskBoards Management</h3>
+<h1>TaskBoards Management</h1>
 
 <p>This component allows you to manage your task boards.</p>
 
@@ -19,27 +19,19 @@
 }
 else
 {
-    <FluentDataGrid Id="taskBoardsgrid" 
-                    Items="@taskBoards" 
-                    GridTemplateColumns="1fr 1fr 1fr 1fr 1fr 1fr" 
-                    TGridItem="TaskBoardDto"
-                    SelectMode="DataGridSelectMode.Single"
-                    SelectFromEntireRow="true"
-                    >
-            <SelectColumn
-                TGridItem="TaskBoardDto"
-                SelectMode="DataGridSelectMode.Single"
-            />
-            <PropertyColumn Title="Id" Property="@(c => c!.Id)" Sortable="true" Align="Align.Start"/>
-            <PropertyColumn Title="Name" Property="@(c => c!.Name)" Sortable="true" Align="Align.Start"/>
-            <PropertyColumn Title="Description" Property="@(c => c!.Description)" Sortable="true" Align="Align.Start"/>
-            <PropertyColumn Title="Task Count" Property="@(c => c!.Tasks.Count)" Sortable="true" Align="Align.Center"/>
-            <PropertyColumn Title="Created" Property="@(c => c!.CreatedAt)" Sortable="true" Align="Align.End"/>
-            <TemplateColumn Title="Actions" Align="@Align.End" >
-                <FluentButton aria-label="Edit item" IconEnd="@(new Icons.Regular.Size16.Edit())"
-                              OnClick="@(() => OpenEditDialog(context))"/>
-                <FluentButton aria-label="Delete item" IconEnd="@(new Icons.Regular.Size16.Delete())" OnClick="@(() => { })"/>
-            </TemplateColumn>
+    <FluentDataGrid Id="taskBoardsgrid" Items="@taskBoards" GridTemplateColumns="1fr 1fr 1fr 1fr 1fr 1fr"
+        TGridItem="TaskBoardDto" SelectMode="DataGridSelectMode.Single" SelectFromEntireRow="true">
+        <SelectColumn TGridItem="TaskBoardDto" SelectMode="DataGridSelectMode.Single" />
+        <PropertyColumn Title="Id" Property="@(c => c!.Id)" Sortable="true" Align="Align.Start" />
+        <PropertyColumn Title="Name" Property="@(c => c!.Name)" Sortable="true" Align="Align.Start" />
+        <PropertyColumn Title="Description" Property="@(c => c!.Description)" Sortable="true" Align="Align.Start" />
+        <PropertyColumn Title="Task Count" Property="@(c => c!.Tasks.Count)" Sortable="true" Align="Align.Center" />
+        <PropertyColumn Title="Created" Property="@(c => c!.CreatedAt)" Sortable="true" Align="Align.End" />
+        <TemplateColumn Title="Actions" Align="@Align.End">
+            <FluentButton aria-label="Edit item" IconEnd="@(new Icons.Regular.Size16.Edit())"
+                OnClick="@(() => OpenEditDialog(context))" />
+            <FluentButton aria-label="Delete item" IconEnd="@(new Icons.Regular.Size16.Delete())" OnClick="@(() => { })" />
+        </TemplateColumn>
     </FluentDataGrid>
 
     <FluentStack Orientation="Orientation.Horizontal" HorizontalAlignment="HorizontalAlignment.Center">
@@ -64,19 +56,19 @@ else
         var result = await TaskBoardService.GetAllTaskBoardsAsync();
         return result.AsQueryable();
     }
-    
+
     private async Task OpenEditDialog(TaskBoardDto taskBoardDto)
     {
-        var dialog = 
-            await DialogService.ShowDialogAsync<TaskBoardEditDialog>(
-            new TaskBoardEditModel   
+        var dialog =
+        await DialogService.ShowDialogAsync<TaskBoardEditDialog>(
+        new TaskBoardEditModel
             {
-                
-                    Id = taskBoardDto.Id,
-                    Name = taskBoardDto.Name,
-                    Description = taskBoardDto.Description
+
+                Id = taskBoardDto.Id,
+                Name = taskBoardDto.Name,
+                Description = taskBoardDto.Description
             },
-            new DialogParameters()
+        new DialogParameters()
             {
                 Width = "480px",
                 Height = "240px",
@@ -84,7 +76,7 @@ else
                 PreventDismissOnOverlayClick = true,
                 PreventScroll = true,
             });
-        
+
         var result = await dialog.Result;
         if (!result.Cancelled && result.Data != null)
         {
@@ -106,8 +98,8 @@ else
     private async Task OpenAddTaskBoardDialog()
     {
         var dialog = await DialogService.ShowDialogAsync<TaskBoardEditDialog>(
-            new TaskBoardEditModel(),
-            new DialogParameters()
+        new TaskBoardEditModel(),
+        new DialogParameters()
             {
                 Width = "480px",
                 Height = "240px",
