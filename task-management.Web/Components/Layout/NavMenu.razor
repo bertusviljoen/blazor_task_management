@@ -1,6 +1,8 @@
 ﻿@using task_management.Shared.Models
 @using task_management.Web.Components.Pages
 @using task_management.Web.Services
+@rendermode InteractiveServer
+
 <div class="navmenu">
     <input type="checkbox" title="Menu expand/collapse toggle" id="navmenu-toggle" class="navmenu-icon" />
     <label for="navmenu-toggle" class="navmenu-icon">
@@ -14,19 +16,20 @@
             <FluentNavLink Href="counter" Icon="@(new Icons.Regular.Size20.NumberSymbolSquare())"
                 IconColor="Color.Accent">Counter</FluentNavLink>
             <FluentNavLink Href="weather" Icon="@(new Icons.Regular.Size20.WeatherPartlyCloudyDay())"
-                           IconColor="Color.Accent">Weather</FluentNavLink>
-            <FluentNavLink Href="taskboards" Icon="@(new Icons.Regular.Size20.Folder())"
-                           IconColor="Color.Accent">TaskBoards</FluentNavLink>
+                IconColor="Color.Accent">Weather</FluentNavLink>
+            <FluentNavLink Href="taskboards" Icon="@(new Icons.Regular.Size20.Folder())" IconColor="Color.Accent">
+                TaskBoards</FluentNavLink>
             <FluentDivider />
             @if (taskBoards != null)
             {
                 @foreach (var taskBoard in taskBoards)
                 {
                     <FluentNavLink Href="@($"taskboards/{taskBoard.Id}")" Icon="@(new Icons.Regular.Size20.Folder())"
-                                   IconColor="Color.Accent">@taskBoard.Name</FluentNavLink>
+                        IconColor="Color.Accent">@taskBoard.Name</FluentNavLink>
                 }
             }
-            <FluentNavLink Href="#" Icon="@(new Icons.Regular.Size20.Add())" IconColor="Color.Accent" OnClick="OpenAddTaskBoardDialog">
+            <FluentNavLink Icon="@(new Icons.Regular.Size20.Add())" IconColor="Color.Accent"
+                OnClick="OpenAddTaskBoardDialog">
                 Add TaskBoard
             </FluentNavLink>
         </FluentNavMenu>
@@ -51,11 +54,13 @@
         taskBoards = (await TaskBoardService.GetAllTaskBoardsAsync()).ToList();
     }
 
+
     private async Task OpenAddTaskBoardDialog()
     {
+        Console.WriteLine("OpenAddTaskBoardDialog");
         var dialog = await DialogService.ShowDialogAsync<TaskBoardEditDialog>(
-            new TaskBoardEditModel(),
-            new DialogParameters()
+        new TaskBoardEditModel(),
+        new DialogParameters()
             {
                 Width = "480px",
                 Height = "240px",
