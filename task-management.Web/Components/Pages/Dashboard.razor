@@ -9,151 +9,101 @@
 
 <h1>Dashboard</h1>
 
-<FluentStack Style="margin: 24px 0;" VerticalAlignment="VerticalAlignment.Center">
-    <FluentText Typo="Typography.H3" Style="flex: 1;">Task Overview</FluentText>
-<FluentButton Appearance="Appearance.Accent" Style="margin-left: auto;" Class="mobile-fab">
-        <FluentIcon Value="@(new Icons.Regular.Size24.Add())" />
-        New Task
-    </FluentButton>
-</FluentStack>
-
 @if (taskBoards == null)
 {
     <FluentProgressRing />
 }
 else
 {
-
-<FluentGrid Spacing="3" Justify="JustifyContent.SpaceEvenly" OnBreakpointEnter="@OnBreakpointEnterHandler"
-        AdaptiveRendering="true" Style="margin-bottom: 24px;">
-
-        @foreach (var taskBoard in taskBoards)
-        {
-<FluentGridItem xs="12">
-<FluentCard Style="padding: 16px;" Class="hover-card">
-        <FluentStack Orientation="Orientation.Horizontal" HorizontalAlignment="HorizontalAlignment.Start"
-            VerticalAlignment="VerticalAlignment.Center" Style="gap: 12px;">
-            <FluentIcon Value="@(new Icons.Regular.Size24.Folder())" Style="color: var(--accent-fill-rest);" />
-            <FluentText Typo="Typography.H4">@taskBoard.Name</FluentText>
-        </FluentStack>
-    </FluentCard>
-</FluentGridItem>
-
-            <FluentGridItem xs="6" sm="3">
-<FluentCard Style="height: 100%;" Class="hover-card">
-    <FluentStack Orientation="Orientation.Vertical" HorizontalAlignment="HorizontalAlignment.Center"
-        VerticalAlignment="VerticalAlignment.Center" Style="gap: 12px; padding: 16px;">
-        <FluentIcon Value="@(new Icons.Regular.Size24.TaskListAdd())" Style="font-size: 32px;" />
-        <FluentText Typo="Typography.H5" Style="text-align: center;">@taskBoard.Tasks.Count Tasks</FluentText>
-    </FluentStack>
-</FluentCard>
-            </FluentGridItem>
-
-            <FluentGridItem xs="6" sm="3">
-<FluentCard Class="hover-card">
-                    <FluentStack Orientation="Orientation.Vertical" HorizontalAlignment="HorizontalAlignment.Center"
-                        VerticalAlignment="VerticalAlignment.Center">
-                        <FluentIcon Value="@(new Icons.Regular.Size24.ArrowSync())" />
-                        <FluentLabel Typo="Typography.H5">
-                            @taskBoard.Tasks.Count(t => t.Status == TaskItemStatus.InProgress) In Progress
-                        </FluentLabel>
-                    </FluentStack>
+    @foreach (var board in taskBoards)
+    {
+        <div class="board-section">
+            <FluentLabel Typo="Typography.H4" Style="margin: 1rem 0;">@board.Name</FluentLabel>
+            <div class="metrics-grid">
+                <FluentCard Class="metric-card">
+                    <div Style="padding: 16px; display: flex; flex-direction: column; gap: 12px;">
+                        <FluentLabel Typo="Typography.H6">Task Status</FluentLabel>
+                        <FluentLabel>Total Tasks: @board.Tasks.Count</FluentLabel>
+                        <FluentLabel>In Progress: @board.Tasks.Count(t => t.Status == TaskItemStatus.InProgress)</FluentLabel>
+                        <FluentLabel>Completed: @board.Tasks.Count(t => t.Status == TaskItemStatus.Done)</FluentLabel>
+                    </div>
                 </FluentCard>
-            </FluentGridItem>
 
-            <FluentGridItem xs="6" sm="3">
-                <FluentCard>
-                    <FluentStack Orientation="Orientation.Vertical" HorizontalAlignment="HorizontalAlignment.Center"
-                        VerticalAlignment="VerticalAlignment.Center">
-                        <FluentIcon Value="@(new Icons.Regular.Size24.CheckmarkCircle())" />
-                        <FluentLabel Typo="Typography.H5">
-                            @taskBoard.Tasks.Count(t => t.Status == TaskItemStatus.Done) Completed
+                <FluentCard Class="metric-card">
+                    <div Style="padding: 16px; display: flex; flex-direction: column; gap: 12px;">
+                        <FluentLabel Typo="Typography.H6">Priority Overview</FluentLabel>
+                        <FluentLabel>High Priority: @board.Tasks.Count(t => t.Priority == TaskItemPriority.High)</FluentLabel>
+                        <FluentLabel>Medium Priority: @board.Tasks.Count(t => t.Priority == TaskItemPriority.Medium)
                         </FluentLabel>
-                    </FluentStack>
+                        <FluentLabel>Low Priority: @board.Tasks.Count(t => t.Priority == TaskItemPriority.Low)</FluentLabel>
+                    </div>
                 </FluentCard>
-            </FluentGridItem>
 
-            <FluentGridItem xs="6" sm="3">
-                <FluentCard>
-                    <FluentStack Orientation="Orientation.Vertical" HorizontalAlignment="HorizontalAlignment.Center"
-                        VerticalAlignment="VerticalAlignment.Center">
-                        <FluentIcon Value="@(new Icons.Regular.Size24.Alert())" />
-                        <FluentLabel Typo="Typography.H5">
-                            @taskBoard.Tasks.Count(t => t.Priority == TaskItemPriority.High) High Priority
-                        </FluentLabel>
-                    </FluentStack>
+                <FluentCard Class="metric-card">
+                    <div Style="padding: 16px; display: flex; flex-direction: column; gap: 12px;">
+                        <FluentLabel Typo="Typography.H6">Time Analysis</FluentLabel>
+                        <FluentLabel>Overdue Tasks: @board.Tasks.Count(t => t.DueDate.HasValue && t.DueDate.Value.Date <
+                    DateTime.Today)</FluentLabel>
+                        <FluentLabel>Due Today: @board.Tasks.Count(t => t.DueDate.HasValue && t.DueDate.Value.Date ==
+                    DateTime.Today)</FluentLabel>
+                        <FluentLabel>Due This Week: @board.Tasks.Count(t => t.DueDate.HasValue && t.DueDate.Value.Date <=
+                    DateTime.Today.AddDays(7))</FluentLabel>
+                    </div>
                 </FluentCard>
-            </FluentGridItem>
 
-            <FluentGridItem xs="6" sm="3">
-                <FluentCard>
-                    <FluentStack Orientation="Orientation.Vertical" HorizontalAlignment="HorizontalAlignment.Center"
-                        VerticalAlignment="VerticalAlignment.Center">
-                        <FluentIcon Value="@(new Icons.Regular.Size24.ClockAlarm())" />
-                        <FluentLabel Typo="Typography.H5">
-                            @taskBoard.Tasks.Count(t => t.DueDate.HasValue && t.DueDate.Value.Date < DateTime.Today) Overdue
-                        </FluentLabel>
-                    </FluentStack>
+                <FluentCard Class="metric-card">
+                    <div Style="padding: 16px; display: flex; flex-direction: column; gap: 12px;">
+                        <FluentLabel Typo="Typography.H6">Recent Activity</FluentLabel>
+                        <FluentLabel>Active Tasks: @board.Tasks.Count(t => t.Status != TaskItemStatus.Done)</FluentLabel>
+                        <FluentLabel>Completed Tasks: @board.Tasks.Count(t => t.Status == TaskItemStatus.Done)</FluentLabel>
+                    </div>
                 </FluentCard>
-            </FluentGridItem>
+
+                <FluentCard Class="metric-card">
+                    <div Style="padding: 16px; display: flex; flex-direction: column; gap: 12px;">
+                        <FluentLabel Typo="Typography.H6">Performance</FluentLabel>
+                        <FluentLabel>Completion Rate: @GetBoardCompletionRate(board)%</FluentLabel>
+                        <FluentLabel>On-Time Completion: @GetBoardOnTimeCompletionRate(board)%</FluentLabel>
+                    </div>
+                </FluentCard>
+
+                <FluentCard Class="metric-card">
+                    <div Style="padding: 16px; display: flex; flex-direction: column; gap: 12px;">
+                        <FluentLabel Typo="Typography.H6">Board Details</FluentLabel>
+                        <FluentLabel>Description: @(board.Description ?? "No description")</FluentLabel>
+                        <FluentLabel>Last Updated: @(board.Tasks.Any() ? board.Tasks.Max(t => t.DueDate)?.ToString("d") ?? "N/A"
+                    : "N/A")</FluentLabel>
+                        </div>
+                    </FluentCard>
+                </div>
+            </div>
+    }
 }
 
 <style>
-    .hover-card {
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    .board-section {
+        margin-bottom: 2rem;
     }
 
-    .hover-card:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        cursor: pointer;
+    .metrics-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem;
+        padding: 1rem;
+        /*background: #f0f0f0;*/
+        /* Replace with your desired color */
+        border-radius: 8px;
     }
 
-    .mobile-fab {
-        display: none;
-    }
-
-    @@media (max-width: 768px) {
-        .mobile-fab {
-            display: block;
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            z-index: 100;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 50%;
-            width: 56px;
-            height: 56px;
-            padding: 0;
-        }
-
-        .mobile-fab fluent-icon {
-            margin: 0;
-        }
-
-        .mobile-fab::part(control) {
-            border-radius: 50%;
-        }
-
-        fluent-grid-item {
-            margin-bottom: 12px;
-        }
-
-        .hover-card:hover {
-            transform: none;
-            box-shadow: none;
-        }
+    .metric-card {
+        min-height: 180px;
+        /*background: #f0f0f0;*/
+        /* Replace with your desired color */
     }
 </style>
-    </FluentGrid>
-}
 
 @code {
-
     private TaskBoardDto[] taskBoards;
-
-    JustifyContent Justification = JustifyContent.SpaceEvenly;
-    int Spacing = 3;
 
     protected override async Task OnInitializedAsync()
     {
@@ -161,8 +111,21 @@ else
         taskBoards = restTaskBoards.ToArray();
     }
 
-    void OnBreakpointEnterHandler(GridItemSize size)
+    private double GetBoardCompletionRate(TaskBoardDto board)
     {
+        if (board.Tasks.Count == 0) return 0;
+        return Math.Round((double)board.Tasks.Count(t => t.Status == TaskItemStatus.Done) / board.Tasks.Count * 100, 1);
+    }
 
+    private double GetBoardOnTimeCompletionRate(TaskBoardDto board)
+    {
+        var completedTasks = board.Tasks.Count(t => t.Status == TaskItemStatus.Done);
+        if (completedTasks == 0) return 0;
+
+        var onTimeTasks = board.Tasks.Count(t =>
+        t.Status == TaskItemStatus.Done &&
+        (!t.DueDate.HasValue || t.DueDate.Value.Date >= DateTime.Today));
+
+        return Math.Round((double)onTimeTasks / completedTasks * 100, 1);
     }
 }
