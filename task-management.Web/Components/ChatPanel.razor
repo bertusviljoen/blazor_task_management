@@ -1,10 +1,10 @@
 @inject NavigationManager Navigation
 
-<FluentStack Orientation="Orientation.Vertical" Class="chat-panel" Style="width: 30%; position: fixed; right: 0;">
-    <FluentButton Appearance="Appearance.Stealth" @onclick="ToggleChat">
-        <FluentIcon Value="@(new Icons.Regular.Size24.Chat())" />
-    </FluentButton>
+<FluentButton Class="floating-button" @onclick="ToggleChat">
+    <FluentIcon Value="@(new Icons.Regular.Size24.Chat())" />
+</FluentButton>
 
+<FluentStack Orientation="Orientation.Vertical" Class="chat-panel @(isOpen ? "open" : "")" Style="right: 0;">
     @if (isOpen)
     {
         <FluentStack Orientation="Orientation.Vertical" Class="chat-content" Style="height: 100vh;">
@@ -15,7 +15,7 @@
 </FluentStack>
 
 @code {
-    private bool isOpen = true;
+    private bool isOpen = false;
     private string message = string.Empty;
 
     private void ToggleChat()
