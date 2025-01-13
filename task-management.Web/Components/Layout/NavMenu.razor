@@ -24,7 +24,7 @@
             {
                 @foreach (var taskBoard in taskBoards)
                 {
-                    <FluentNavLink Href="@($"taskboards/{taskBoard.Id}")" Icon="@(new Icons.Regular.Size20.Folder())"
+                    <FluentNavLink Href="@($"/taskboard/{taskBoard.Id}")" Icon="@(new Icons.Regular.Size20.Folder())"
                         IconColor="Color.Accent">@taskBoard.Name</FluentNavLink>
                 }
             }

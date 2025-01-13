@@ -1,0 +1,148 @@
+@page "/taskboard/{id:guid}"
+@using task_management.Shared.Models
+@using task_management.Web.Services
+@using Microsoft.AspNetCore.Components
+@using Microsoft.FluentUI.AspNetCore.Components
+@using System.Linq
+
+@inject ITaskBoardService TaskBoardService
+@inject NavigationManager NavigationManager
+@inject IDialogService DialogService
+
+<PageTitle>TaskBoard</PageTitle>
+
+@if (taskBoard == null)
+{
+    <FluentProgressRing />
+}
+else
+{
+    <div class="taskboard-header">
+        <FluentLabel Typo="Typography.H1">@taskBoard.Name</FluentLabel>
+        <FluentLabel Typo="Typography.Body1">@taskBoard.Description</FluentLabel>
+    </div>
+
+    <div class="taskboard-controls">
+        <FluentTextField @bind-Value="searchText" Placeholder="Search tasks..." />
+        <FluentSelect @bind-Value="selectedStatus">
+            <FluentOption Value="">All</FluentOption>
+            <FluentOption Value="Todo">Todo</FluentOption>
+            <FluentOption Value="InProgress">In Progress</FluentOption>
+            <FluentOption Value="Done">Done</FluentOption>
+        </FluentSelect>
+        <FluentSelect @bind-Value="selectedSort">
+            <FluentOption Value="Priority">Priority</FluentOption>
+            <FluentOption Value="DueDate">Due Date</FluentOption>
+            <FluentOption Value="CreationDate">Creation Date</FluentOption>
+        </FluentSelect>
+    </div>
+
+    <div class="taskboard-tasks">
+        @foreach (var task in FilterAndSortTasks(taskBoard.Tasks))
+        {
+            <FluentCard Class="task-card">
+                <div class="task-card-header">
+                    <FluentLabel Typo="Typography.H4">@task.Title</FluentLabel>
+                    <FluentButton Icon="@(new Icons.Regular.Size16.Edit())" OnClick="() => EditTask(task)" />
+                    <FluentButton Icon="@(new Icons.Regular.Size16.Delete())" OnClick="() => DeleteTask(task)" />
+                </div>
+                <FluentLabel Typo="Typography.Body1">@task.Description</FluentLabel>
+                <FluentLabel Typo="Typography.Body2">Priority: @task.Priority</FluentLabel>
+                <FluentLabel Typo="Typography.Body2">Status: @task.Status</FluentLabel>
+                <FluentLabel Typo="Typography.Body2">Due Date: @task.DueDate?.ToString("d")</FluentLabel>
+            </FluentCard>
+        }
+    </div>
+}
+
+@code {
+    [Parameter]
+    public Guid id { get; set; }
+
+    private TaskBoardDto? taskBoard;
+    private string searchText = string.Empty;
+    private string selectedStatus = string.Empty;
+    private string selectedSort = "Priority";
+
+    protected override async Task OnInitializedAsync()
+    {
+        taskBoard = await TaskBoardService.GetTaskBoardByIdAsync(id);
+    }
+
+    private IEnumerable<TaskItem> FilterAndSortTasks(IEnumerable<TaskItem> tasks)
+    {
+        var filteredTasks = tasks
+            .Where(t => string.IsNullOrEmpty(searchText) || t.Title.Contains(searchText, StringComparison.OrdinalIgnoreCase) || t.Description.Contains(searchText, StringComparison.OrdinalIgnoreCase))
+            .Where(t => string.IsNullOrEmpty(selectedStatus) || t.Status.ToString() == selectedStatus);
+
+        return selectedSort switch
+        {
+            "Priority" => filteredTasks.OrderByDescending(t => t.Priority).ThenBy(t => t.DueDate).ThenBy(t => t.CreatedAt),
+            "DueDate" => filteredTasks.OrderBy(t => t.DueDate).ThenByDescending(t => t.Priority).ThenBy(t => t.CreatedAt),
+            "CreationDate" => filteredTasks.OrderBy(t => t.CreatedAt).ThenByDescending(t => t.Priority).ThenBy(t => t.DueDate),
+            _ => filteredTasks
+        };
+    }
+
+    private async Task EditTask(TaskItem task)
+    {
+        var dialog = await DialogService.ShowDialogAsync<TaskEditDialog>(
+            new TaskEditModel
+            {
+                Id = task.Id,
+                Title = task.Title,
+                Description = task.Description,
+                Priority = task.Priority,
+                Status = task.Status,
+                DueDate = task.DueDate
+            },
+            new DialogParameters
+            {
+                Title = "Edit Task",
+                PreventDismissOnOverlayClick = true,
+                PreventScroll = true
+            });
+
+        var result = await dialog.Result;
+        if (!result.Cancelled && result.Data != null)
+        {
+            var updatedTask = result.Data as TaskItem;
+            if (updatedTask != null)
+            {
+                var taskToUpdate = taskBoard.Tasks.FirstOrDefault(t => t.Id == updatedTask.Id);
+                if (taskToUpdate != null)
+                {
+                    taskToUpdate.Title = updatedTask.Title;
+                    taskToUpdate.Description = updatedTask.Description;
+                    taskToUpdate.Priority = updatedTask.Priority;
+                    taskToUpdate.Status = updatedTask.Status;
+                    taskToUpdate.DueDate = updatedTask.DueDate;
+
+                    await TaskBoardService.UpdateTaskBoardAsync(taskBoard.Id, taskBoard);
+                }
+            }
+        }
+    }
+
+    private async Task DeleteTask(TaskItem task)
+    {
+        var dialog = await DialogService.ShowDialogAsync<ConfirmationDialog>(
+            new DialogParameters
+            {
+                Title = "Delete Confirmation",
+                PreventScroll = true,
+                PreventDismissOnOverlayClick = true
+            });
+
+        var result = await dialog.Result;
+        if (!result.Cancelled && result.Data != null)
+        {
+            var confirmed = (bool)result.Data;
+            if (confirmed)
+            {
+                taskBoard.Tasks.Remove(task);
+                await TaskBoardService.UpdateTaskBoardAsync(taskBoard.Id, taskBoard);
+            }
+        }
+    }
+}
