@@ -3,6 +3,7 @@
 @using task_management.Web.Services
 @using Microsoft.AspNetCore.Components
 @using Microsoft.FluentUI.AspNetCore.Components
+@using task_management.Web.Components.Dialogs
 @using System.Linq
 
 @inject ITaskBoardService TaskBoardService
@@ -19,18 +20,18 @@ else
 {
     <div class="taskboard-header">
         <FluentLabel Typo="Typography.H1">@taskBoard.Name</FluentLabel>
-        <FluentLabel Typo="Typography.Body1">@taskBoard.Description</FluentLabel>
+        <FluentLabel Typo="Typography.H4">@taskBoard.Description</FluentLabel>
     </div>
 
     <div class="taskboard-controls">
         <FluentTextField @bind-Value="searchText" Placeholder="Search tasks..." />
-        <FluentSelect @bind-Value="selectedStatus">
+        <FluentSelect @bind-Value="selectedStatus" TOption="string">
             <FluentOption Value="">All</FluentOption>
             <FluentOption Value="Todo">Todo</FluentOption>
             <FluentOption Value="InProgress">In Progress</FluentOption>
             <FluentOption Value="Done">Done</FluentOption>
         </FluentSelect>
-        <FluentSelect @bind-Value="selectedSort">
+        <FluentSelect @bind-Value="selectedSort" TOption="string">
             <FluentOption Value="Priority">Priority</FluentOption>
             <FluentOption Value="DueDate">Due Date</FluentOption>
             <FluentOption Value="CreationDate">Creation Date</FluentOption>
@@ -46,10 +47,10 @@ else
                     <FluentButton Icon="@(new Icons.Regular.Size16.Edit())" OnClick="() => EditTask(task)" />
                     <FluentButton Icon="@(new Icons.Regular.Size16.Delete())" OnClick="() => DeleteTask(task)" />
                 </div>
-                <FluentLabel Typo="Typography.Body1">@task.Description</FluentLabel>
-                <FluentLabel Typo="Typography.Body2">Priority: @task.Priority</FluentLabel>
-                <FluentLabel Typo="Typography.Body2">Status: @task.Status</FluentLabel>
-                <FluentLabel Typo="Typography.Body2">Due Date: @task.DueDate?.ToString("d")</FluentLabel>
+                <FluentLabel Typo="Typography.H3">@task.Description</FluentLabel>
+                <FluentLabel Typo="Typography.H3">Priority: @task.Priority</FluentLabel>
+                <FluentLabel Typo="Typography.H3">Status: @task.Status</FluentLabel>
+                <FluentLabel Typo="Typography.H3">Due Date: @task.DueDate?.ToString("d")</FluentLabel>
             </FluentCard>
         }
     </div>

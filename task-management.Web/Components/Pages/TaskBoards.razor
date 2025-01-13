@@ -23,7 +23,7 @@ else
         TGridItem="TaskBoardDto" SelectMode="DataGridSelectMode.Single" SelectFromEntireRow="true">
         <SelectColumn TGridItem="TaskBoardDto" SelectMode="DataGridSelectMode.Single" />
         <PropertyColumn Title="Id" Property="@(c => c!.Id)" Sortable="true" Align="Align.Start" />
-        <PropertyColumn Title="Name" Property="@(c => c!.Name)" Sortable="true" Align="Align.Start" />
+        <PropertyColumn Title="Title" Property="@(c => c!.Name)" Sortable="true" Align="Align.Start" />
         <PropertyColumn Title="Description" Property="@(c => c!.Description)" Sortable="true" Align="Align.Start" />
         <PropertyColumn Title="Task Count" Property="@(c => c!.Tasks.Count)" Sortable="true" Align="Align.Center" />
         <PropertyColumn Title="Created" Property="@(c => c!.CreatedAt)" Sortable="true" Align="Align.End" />

@@ -25,14 +25,14 @@
 
 @* Body *@
 <FluentDialogBody>
-    <FluentTextField @bind-Value="@Content.Name">Name:</FluentTextField>
+    <FluentTextField @bind-Value="@Content.Name">Title:</FluentTextField>
     @if (string.IsNullOrWhiteSpace(Content.Name))
     {
-        <FluentLabel Typo="Typography.H6" Color="Color.Error">Name is required</FluentLabel>
+        <FluentLabel Typo="Typography.H6" Color="Color.Error">Title is required</FluentLabel>
     }
     else if (Content.Name.Length > 100)
     {
-        <FluentLabel Typo="Typography.H6" Color="Color.Error">Name cannot exceed 100 characters</FluentLabel>
+        <FluentLabel Typo="Typography.H6" Color="Color.Error">Title cannot exceed 100 characters</FluentLabel>
     }
     <FluentTextArea @bind-Value="@Content.Description">Description:</FluentTextArea>
     @if (Content.Description.Length > 500)

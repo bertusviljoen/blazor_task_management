@@ -1,0 +1,92 @@
+@using task_management.Shared.Models
+@using Microsoft.AspNetCore.Components
+@using Microsoft.FluentUI.AspNetCore.Components
+@using task_management.Web.Components.Pages
+
+@implements IDialogContentComponent<TaskEditModel>
+
+@inject IDialogService DialogService
+
+<FluentDialogHeader ShowDismiss="true">
+    <FluentStack VerticalAlignment="VerticalAlignment.Center">
+        <FluentIcon Value="@(new Icons.Regular.Size24.TaskListRtl())" />
+        <FluentLabel Typo="Typography.PaneHeader">
+            @Dialog.Instance.Parameters.Title
+        </FluentLabel>
+    </FluentStack>
+</FluentDialogHeader>
+
+<FluentDialogFooter>
+    <FluentButton Appearance="Appearance.Accent" OnClick="@SaveAsync">Save</FluentButton>
+    <FluentButton Appearance="Appearance.Neutral" OnClick="@CancelAsync">Cancel</FluentButton>
+</FluentDialogFooter>
+
+<FluentDialogBody>
+    <FluentStack Orientation="Orientation.Vertical" VerticalGap="12">
+        <FluentTextField @bind-Value="@Content.Title">Title:</FluentTextField>
+        @if (string.IsNullOrWhiteSpace(Content.Title))
+        {
+            <FluentLabel Typo="Typography.H6" Color="Color.Error">Title is required</FluentLabel>
+        }
+        else if (Content.Title.Length > 100)
+        {
+            <FluentLabel Typo="Typography.H6" Color="Color.Error">Title cannot exceed 100 characters</FluentLabel>
+        }
+
+        <FluentTextArea @bind-Value="@Content.Description">Description:</FluentTextArea>
+        @if (Content.Description.Length > 500)
+        {
+            <FluentLabel Typo="Typography.H6" Color="Color.Error">Description cannot exceed 500 characters</FluentLabel>
+        }
+
+        <!-- Priority Dropdown -->
+        <FluentLabel Typo="Typography.H6">Priority:</FluentLabel>
+        <FluentSelect TOption="TaskItemPriority" @bind-Value="@SelectedPriority">
+            @foreach (var priority in Enum.GetValues<TaskItemPriority>())
+            {
+                <FluentOption Value="@priority.ToString()">@priority</FluentOption>
+            }
+        </FluentSelect>
+        
+
+        <FluentDatePicker @bind-Value="@Content.DueDate">Due Date:</FluentDatePicker>
+    </FluentStack>
+</FluentDialogBody>
+
+@code {
+    [Parameter]
+    public TaskEditModel Content { get; set; } = new();
+
+    [CascadingParameter]
+    public FluentDialog Dialog { get; set; } = default!;
+    
+    //Priorities
+    private string SelectedPriority { get; set; }
+    private TaskItemPriority TaskItemPriority { get; set; }
+
+    private async Task SaveAsync()
+    {
+        // Basic validation
+        if (string.IsNullOrWhiteSpace(Content.Title) || Content.Title.Length > 100 || Content.Description.Length > 500)
+        {
+            return;
+        }
+
+        await Dialog.CloseAsync(new TaskItem()
+            {
+                Id = Content.Id,
+                Title = Content.Title,
+                Description = Content.Description,
+                Priority = Content.Priority,
+                Status = Content.Status,
+                CreatedAt = DateTime.UtcNow,
+                DueDate = Content.DueDate
+            }
+        );
+    }
+
+    private async Task CancelAsync()
+    {
+        await Dialog.CancelAsync();
+    }
+}
