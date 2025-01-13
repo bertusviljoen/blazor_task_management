@@ -1,7 +1,4 @@
 @using task_management.Shared.Models
-@using Microsoft.AspNetCore.Components
-@using Microsoft.FluentUI.AspNetCore.Components
-@using task_management.Web.Components.Pages
 
 @implements IDialogContentComponent<TaskEditModel>
 
@@ -39,14 +36,14 @@
             <FluentLabel Typo="Typography.H6" Color="Color.Error">Description cannot exceed 500 characters</FluentLabel>
         }
 
-        <!-- Priority Dropdown -->
-        <FluentLabel Typo="Typography.H6">Priority:</FluentLabel>
-        <FluentSelect TOption="TaskItemPriority" @bind-Value="@SelectedPriority">
-            @foreach (var priority in Enum.GetValues<TaskItemPriority>())
-            {
-                <FluentOption Value="@priority.ToString()">@priority</FluentOption>
-            }
-        </FluentSelect>
+        @* <!-- Priority Dropdown --> *@
+        @* <FluentLabel Typo="Typography.H6">Priority:</FluentLabel> *@
+        @* <FluentSelect TOption="TaskItemPriority" @bind-Value="@SelectedPriority"> *@
+        @*     @foreach (var priority in Enum.GetValues<TaskItemPriority>()) *@
+        @*     { *@
+        @*         <FluentOption Value="@priority.ToString()">@priority</FluentOption> *@
+        @*     } *@
+        @* </FluentSelect> *@
         
 
         <FluentDatePicker @bind-Value="@Content.DueDate">Due Date:</FluentDatePicker>
@@ -60,10 +57,6 @@
     [CascadingParameter]
     public FluentDialog Dialog { get; set; } = default!;
     
-    //Priorities
-    private string SelectedPriority { get; set; }
-    private TaskItemPriority TaskItemPriority { get; set; }
-
     private async Task SaveAsync()
     {
         // Basic validation

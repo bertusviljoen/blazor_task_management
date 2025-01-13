@@ -6,7 +6,6 @@
 @using System.Linq
 
 @inject ITaskBoardService TaskBoardService
-@inject NavigationManager NavigationManager
 @inject IDialogService DialogService
 
 <PageTitle>TaskBoard</PageTitle>
@@ -72,8 +71,9 @@ else
     private IEnumerable<TaskItem> FilterAndSortTasks(IEnumerable<TaskItem> tasks)
     {
         var filteredTasks = tasks
-            .Where(t => string.IsNullOrEmpty(searchText) || t.Title.Contains(searchText, StringComparison.OrdinalIgnoreCase) || t.Description.Contains(searchText, StringComparison.OrdinalIgnoreCase))
-            .Where(t => string.IsNullOrEmpty(selectedStatus) || t.Status.ToString() == selectedStatus);
+        .Where(t => string.IsNullOrEmpty(searchText) || t.Title.Contains(searchText, StringComparison.OrdinalIgnoreCase) ||
+        t.Description.Contains(searchText, StringComparison.OrdinalIgnoreCase))
+        .Where(t => string.IsNullOrEmpty(selectedStatus) || t.Status.ToString() == selectedStatus);
 
         return selectedSort switch
         {
@@ -87,7 +87,7 @@ else
     private async Task EditTask(TaskItem task)
     {
         var dialog = await DialogService.ShowDialogAsync<TaskEditDialog>(
-            new TaskEditModel
+        new TaskEditModel
             {
                 Id = task.Id,
                 Title = task.Title,
@@ -96,7 +96,7 @@ else
                 Status = task.Status,
                 DueDate = task.DueDate
             },
-            new DialogParameters
+        new DialogParameters
             {
                 Title = "Edit Task",
                 PreventDismissOnOverlayClick = true,
@@ -127,7 +127,7 @@ else
     private async Task DeleteTask(TaskItem task)
     {
         var dialog = await DialogService.ShowDialogAsync<ConfirmationDialog>(
-            new DialogParameters
+        new DialogParameters
             {
                 Title = "Delete Confirmation",
                 PreventScroll = true,
