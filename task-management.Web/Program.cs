@@ -1,7 +1,6 @@
 using task_management.Web;
 using task_management.Web.Components;
 using task_management.Web.Services;
-using task_management.Web.Components;
 using Microsoft.FluentUI.AspNetCore.Components;
 using System.Text.Json;
 using Microsoft.AspNetCore.Http.Json;
@@ -45,8 +44,6 @@ builder.Services.AddHttpClient<ITaskBoardService, ClientTaskBoardService>(client
     {
         client.BaseAddress = new(apiserviceBaseUrl);
     });
-
-builder.Services.AddScoped<ChatService>();
 
 var app = builder.Build();
 
