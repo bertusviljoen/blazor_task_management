@@ -1,5 +1,4 @@
 ﻿@inherits LayoutComponentBase
-
 <FluentLayout>
     <FluentHeader>
         Task Helper
@@ -20,7 +19,7 @@
                 @Body
             </div>
         </FluentBodyContent>
-        <ChatPanel />
+        <ChatPanel @rendermode="InteractiveServer" />
     </FluentStack>
     <FluentFooter>
         <a href="https://www.fluentui-blazor.net" target="_blank">Documentation and demos</a>
@@ -28,7 +27,6 @@
         <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor" target="_blank">About Blazor</a>
     </FluentFooter>
 </FluentLayout>
-
 
 <div id="blazor-error-ui" data-nosnippet>
     An unhandled error has occurred.
