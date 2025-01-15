@@ -4,7 +4,7 @@
     <FluentIcon Value="@(new Icons.Regular.Size24.Chat())" />
 </FluentButton>
 
-<FluentStack Orientation="Orientation.Vertical" Class="@($"chat-panel {(isOpen ? "open" : "")}")" Style="right: 0;">
+<FluentStack Orientation="Orientation.Vertical" Class="@($"chat-panel {(isOpen ? "open" : "")}")" Style="@(isOpen ? "right: 0;" : "right: -30%;")">
     @if (isOpen)
     {
         <FluentStack Orientation="Orientation.Vertical" Class="chat-content" Style="height: 100vh;">
