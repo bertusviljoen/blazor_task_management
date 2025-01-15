@@ -237,4 +237,12 @@ code {
         left: 20px;
         right: unset;
     }
+
+    .chat-panel {
+        width: 25%;
+    }
+
+    .chat-content {
+        padding: 0.5rem;
+    }
 }
