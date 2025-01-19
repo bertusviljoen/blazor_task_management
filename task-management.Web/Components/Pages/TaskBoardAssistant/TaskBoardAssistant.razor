@@ -82,24 +82,24 @@
         if (!string.IsNullOrWhiteSpace(userMessageText))
         {
             StopResponding();
-            
+
             // Add the user's message to the UI
             messages.Add(new MessageState(new() { Text = userMessageText }, null, CancellationToken.None));
             userMessageText = null;
-            
+
             // Submit request to backend
             currentReplyCancellationTokenSource = new CancellationTokenSource();
             var cancellationToken = currentReplyCancellationTokenSource.Token;
             var request = new AssistantChatRequest(
-                messages.Select(m => m.Message).ToList());
+            messages.Select(m => m.Message).ToList());
             var responseItems = assistantService.AssistantChatAsync(request, cancellationToken);
 
             //Add the assistant's reply to the UI
             var reply = new AssistantChatRequestMessage() { IsAssistant = true, Text = string.Empty };
             messages.Add(new MessageState(reply, responseItems, cancellationToken));
-            
+
         }
-        
+
     }
 
     private void HandleResponseCompleted(MessageState state)
@@ -132,6 +132,6 @@
     ResponseItems, CancellationToken CancellationToken);
 
 
-    
+
 
 }

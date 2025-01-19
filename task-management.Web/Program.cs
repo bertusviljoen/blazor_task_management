@@ -69,7 +69,7 @@ app.MapStaticAssets();
 
 app.UseStaticFiles();
 
-app.MapRazorComponents<task_management.Web.Components.App>()
+app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
 app.MapDefaultEndpoints();
