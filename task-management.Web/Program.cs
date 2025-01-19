@@ -45,6 +45,11 @@ builder.Services.AddHttpClient<ITaskBoardService, ClientTaskBoardService>(client
         client.BaseAddress = new(apiserviceBaseUrl);
     });
 
+builder.Services.AddHttpClient<AssistantService>(client =>
+    {
+        client.BaseAddress = new(apiserviceBaseUrl);
+    });
+
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())

@@ -11,6 +11,8 @@ public class ClientTaskBoardService(HttpClient http) : ITaskBoardService
     {
         return await http.GetFromJsonAsync<IEnumerable<TaskBoardDto>>("api/TaskBoard") ?? [];
     }
+    
+
 
     public async Task<TaskBoardDto> GetTaskBoardByIdAsync(Guid id)
     {
