@@ -1,5 +1,6 @@
 @page "/chat"
 @rendermode InteractiveServer
+@using task_management.Shared.Models
 @using task_management.Web.Services
 @inherits LayoutComponentBase
 @inject IJSRuntime JS
@@ -130,16 +131,7 @@
     public record MessageState(AssistantChatRequestMessage Message, IAsyncEnumerable<AssistantChatReplyItem>?
     ResponseItems, CancellationToken CancellationToken);
 
-    public class AssistantChatRequestMessage
-    {
-        public bool IsAssistant { get; set; }
-        public required string Text { get; set; }
-    }
+
     
-    public record AssistantChatRequest(IReadOnlyList<AssistantChatRequestMessage> Messages);
 
-    public record AssistantChatReplyItem(AssistantChatReplyItemType Type, string Text, int? SearchResultId = null, int?
-    SearchResultProductId = null, int? SearchResultPageNumber = null);
-
-    public enum AssistantChatReplyItemType { AnswerChunk, Search, SearchResult, IsAddressedToCustomer };
 }

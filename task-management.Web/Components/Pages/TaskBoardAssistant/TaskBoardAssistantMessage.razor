@@ -1,8 +1,10 @@
 @using Microsoft.FluentUI.AspNetCore.Components
 @using System.Text.Json
 @using System.Text.RegularExpressions
+@using task_management.Shared.Models
 @using System.Web
 @inject IJSRuntime JS
+@rendermode InteractiveServer
 
 @if (!State.Message.IsAssistant)
 {
@@ -83,7 +85,7 @@ else
 
         if (State.ResponseItems is not null)
         {
-            var searchResults = new List<TaskBoardAssistant.AssistantChatReplyItem>();
+            var searchResults = new List<AssistantChatReplyItem>();
             try
             {
                 // Don't become visible until either a response starts arriving, or some timeout elapses
@@ -96,18 +98,18 @@ else
                 {
                     switch (item.Type)
                     {
-                        case TaskBoardAssistant.AssistantChatReplyItemType.Search:
+                        case AssistantChatReplyItemType.Search:
                             searchText = item.Text;
                             StateHasChanged();
                             break;
-                        case TaskBoardAssistant.AssistantChatReplyItemType.SearchResult:
+                        case AssistantChatReplyItemType.SearchResult:
                             searchResults.Add(item);
                             break;
-                        case TaskBoardAssistant.AssistantChatReplyItemType.AnswerChunk:
+                        case AssistantChatReplyItemType.AnswerChunk:
                             State.Message.Text += item.Text;
                             await module.InvokeVoidAsync("addAnswerChunk", messageContentElement, item.Text);
                             break;
-                        case TaskBoardAssistant.AssistantChatReplyItemType.IsAddressedToCustomer:
+                        case AssistantChatReplyItemType.IsAddressedToCustomer:
                             isSuggestedReply = item.Text == "true";
                             StateHasChanged();
                             break;

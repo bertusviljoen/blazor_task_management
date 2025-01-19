@@ -3,6 +3,7 @@ using Microsoft.Extensions.Hosting;
 using Scalar.AspNetCore;
 using System.Text.Json;
 using Microsoft.AspNetCore.Http.Json;
+using task_management.ApiService.Endpoints;
 using task_management.ApiService.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -78,6 +79,8 @@ app.MapGet("/weatherforecast", () =>
 app.MapDefaultEndpoints();
 
 app.MapTaskBoardEndpoints();
+
+app.MapAssistantEndpoints();
 
 app.Run();
 
