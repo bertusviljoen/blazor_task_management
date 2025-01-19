@@ -19,7 +19,7 @@ public static class AssistantEndpoint
             {
                 await httpContext.Response.WriteAsync(",\n");
                 await httpContext.Response.WriteAsync(JsonSerializer.Serialize(chuck));
-                await Task.Delay(200);
+                await Task.Delay(100);
             }
                 
             // Signal to the UI that we're finished
@@ -37,17 +37,17 @@ public static class AssistantEndpoint
     {
         var assistantMessages = new[]
         {
-            new AssistantChatReplyItem(AssistantChatReplyItemType.AnswerChunk, "Hello"),
-            new AssistantChatReplyItem(AssistantChatReplyItemType.AnswerChunk, "How can I help you?"),
-            new AssistantChatReplyItem(AssistantChatReplyItemType.AnswerChunk, "I can help you with task management"),
-            new AssistantChatReplyItem(AssistantChatReplyItemType.AnswerChunk, "Let me tell you a joke"),
-            new AssistantChatReplyItem(AssistantChatReplyItemType.AnswerChunk, "Why did the scarecrow win an award? Because he was outstanding in his field!"),
-            new AssistantChatReplyItem(AssistantChatReplyItemType.AnswerChunk, "I hope you enjoyed that!"),
+            new AssistantChatReplyItem(AssistantChatReplyItemType.AnswerChunk, "Hello<br>"),
+            new AssistantChatReplyItem(AssistantChatReplyItemType.AnswerChunk, "How can I help you?<br>"),
+            new AssistantChatReplyItem(AssistantChatReplyItemType.AnswerChunk, "I can help you with task management<br>"),
+            new AssistantChatReplyItem(AssistantChatReplyItemType.AnswerChunk, "Let me tell you a joke<br>"),
+            new AssistantChatReplyItem(AssistantChatReplyItemType.AnswerChunk, "Why did the scarecrow win an award? Because he was outstanding in his field!<br>"),
+            new AssistantChatReplyItem(AssistantChatReplyItemType.AnswerChunk, "I hope you enjoyed that!<br>"),
         };
         
         for (int i = 0; i < assistantMessages.Length; i++)
         {
-            await Task.Delay(1000); // Simulate asynchronous work
+            await Task.Delay(50); // Simulate asynchronous work
             yield return assistantMessages[i];
         }
     }
