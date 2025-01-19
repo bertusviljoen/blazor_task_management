@@ -6,20 +6,16 @@
 
 <FluentStack Orientation="Orientation.Vertical" HorizontalAlignment="HorizontalAlignment.Stretch"
     Style="height: 100%; padding: 1rem;">
-    <FluentStack Orientation="Orientation.Horizontal" HorizontalAlignment="HorizontalAlignment.Stretch"
-        VerticalAlignment="VerticalAlignment.Center" Style="margin-bottom: 1rem;">
-        <FluentTextField @bind-Value="UserMessage" Placeholder="Type a message..." Style="flex-grow: 1;" />
-        <FluentButton IconStart="@(new Icons.Regular.Size20.Attach())" OnClick="AttachFile" />
-        <FluentButton IconStart="@(new Icons.Regular.Size20.Call())" OnClick="StartCall" Style="margin-left: 0.5rem;" />
-        <FluentButton IconStart="@(new Icons.Regular.Size20.Send())" OnClick="SendMessage"
-            Style="margin-left: 0.5rem;" />
-    </FluentStack>
-
+    
     <FluentStack Orientation="Orientation.Vertical" HorizontalAlignment="HorizontalAlignment.Stretch"
-        Style="flex-grow: 1; overflow-y: auto;">
-        @foreach (var message in Messages)
+        Style="flex-grow: 1; overflow-y: auto; flex-direction: column-reverse;">
+        @if (IsLoading)
         {
-            <FluentCard Style="@($"margin-bottom: 0.5rem; background-color: {GetBackgroundColor}")">
+            <FluentProgressRing Style="margin-bottom: 1rem;" />
+        }
+        @foreach (var message in Messages.AsEnumerable().Reverse())
+        {
+            <FluentCard Style="@($"margin-bottom: 0.5rem; background-color: {GetBackgroundColor(message.Sender)}")">
                 <FluentStack Orientation="Orientation.Vertical" HorizontalAlignment="HorizontalAlignment.Stretch"
                     Style="padding: 0.5rem;">
                     <FluentLabel Typo="Typography.H4">@message.Text</FluentLabel>
@@ -29,20 +25,57 @@
         }
     </FluentStack>
 
-    @if (IsLoading)
-    {
-        <FluentProgressRing Style="margin-top: 1rem;" />
-    }
+    <div class="chat-input-container">
+        <FluentTextField @bind-Value="UserMessage" 
+                        Placeholder="Type a message..." 
+                        Style="width: 100%;"
+                        @ref="chatInput"
+                        @onkeyup="HandleKeyPress" />
+        <div class="chat-input-actions">
+            <FluentButton IconStart="@(new Icons.Regular.Size20.Attach())" OnClick="AttachFile" />
+            <FluentButton IconStart="@(new Icons.Regular.Size20.Call())" OnClick="StartCall" />
+            <FluentButton IconStart="@(new Icons.Regular.Size20.Send())" OnClick="SendMessage" />
+        </div>
+    </div>
 </FluentStack>
 
 <style>
+    .chat-input-container {
+        position: relative;
+        margin-top: 1rem;
+    }
 
+    .chat-input-actions {
+        position: absolute;
+        right: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        gap: 0.5rem;
+    }
 </style>
 
 @code {
     private string UserMessage { get; set; } = string.Empty;
     private List<ChatMessage> Messages { get; set; } = new List<ChatMessage>();
     private bool IsLoading { get; set; } = false;
+    private FluentTextField? chatInput;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender && chatInput != null)
+        {
+            await chatInput.Element.FocusAsync();
+        }
+    }
+
+    private async Task HandleKeyPress(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter" && !e.ShiftKey)
+        {
+            await Task.Run(() => SendMessage());
+        }
+    }
 
     private object GetBackgroundColor(string sender) => sender == "User" ? "#E0F7FA" : "#FFF3E0";
 
