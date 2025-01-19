@@ -1,30 +1,36 @@
 ﻿.show-chatbot {
     position: fixed;
-    bottom: 5rem;
-    right: 3rem;
-    z-index: 1;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
     box-shadow: 0 2px 7px 2px rgba(0,0,0,0.2);
-    border-radius: 10px;
-    background-image: url('/chatbot.png');
-    background-size: contain;
-    width: 4.5rem;
+    border-radius: 50%;
+    width: 3.5rem;
     height: 3.5rem;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #f3f4f3;
     transition: transform ease-out 0.2s;
-    border: 2px solid transparent;
-    display: block;
+    border: none;
+    background-color: var(--accent-fill-rest);
+    color: var(--accent-foreground-rest);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
 }
 
     .show-chatbot:hover {
-        border-color: #49b4fe;
+        transform: scale(1.1);
+        background-color: var(--accent-fill-hover);
         cursor: pointer;
-        transform: scale(1.2);
         box-shadow: 0 2px 7px 2px rgba(0,0,0,0.4);
     }
 
     .show-chatbot:active {
-        transform: scale(1.1);
+        transform: scale(0.95);
         transition: transform ease-out 0.01s;
+    }
+
+    .show-chatbot ::deep fluent-icon {
+        width: 24px;
+        height: 24px;
+        display: block;
     }

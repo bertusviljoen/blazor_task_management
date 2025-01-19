@@ -1,19 +1,28 @@
-﻿@inject NavigationManager Nav
+﻿@rendermode @(new InteractiveServerRenderMode(prerender: false))
 
-<a class="show-chatbot" title="Show chatbot" @onclick="ShowChatbot"></a>
+<FluentButton Class="show-chatbot" title="Show chatbot" @onclick="ShowChatbot">
+    <FluentIcon Value="@(new Icons.Regular.Size24.Chat())" />
+</FluentButton>
 
 @if (ShowChat)
 {
-    <Chatbot />
+    <CascadingValue Value="@HideChatbot">
+        <Chatbot />
+    </CascadingValue>
 }
 
 @code {
-    [SupplyParameterFromQuery(Name = "chat")]
-    public bool ShowChat { get; set; }
+    private bool ShowChat { get; set; }
 
     private void ShowChatbot()
     {
-        var uri = Nav.GetUriWithQueryParameter("chat", true);
-        Nav.NavigateTo(uri);
+        ShowChat = true;
+        StateHasChanged();
+    }
+
+    private void HideChatbot()
+    {
+        ShowChat = false;
+        StateHasChanged();
     }
 }

@@ -62,6 +62,8 @@ app.UseOutputCache();
 
 app.MapStaticAssets();
 
+app.UseStaticFiles();
+
 app.MapRazorComponents<task_management.Web.Components.App>()
     .AddInteractiveServerRenderMode();
 
