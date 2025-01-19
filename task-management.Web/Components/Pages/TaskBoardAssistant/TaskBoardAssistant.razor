@@ -34,7 +34,7 @@
         {
             var id = $"message{i}";
             var state = messages[i]!;
-            <TicketAssistantMessage @key="@id" State="@state" OnCompleted="@HandleResponseCompleted"
+            <TaskBoardAssistantMessage @key="@id" State="@state" OnCompleted="@HandleResponseCompleted"
                 OnSuggestedReply="@OnSuggestedReply" />
         }
     </div>

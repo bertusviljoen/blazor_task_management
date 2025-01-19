@@ -81,7 +81,7 @@ else
         }
 
         // Load the module, or just get a reference if it's already loaded
-        await using var module = await JS.InvokeAsync<IJSObjectReference>("import", "./Components/Pages/Ticket/TicketAssistantMessage.razor.js");
+        await using var module = await JS.InvokeAsync<IJSObjectReference>("import", "./Components/Pages/TaskBoardAssistant/TaskBoardAssistantMessage.razor.js");
 
         if (State.ResponseItems is not null)
         {
