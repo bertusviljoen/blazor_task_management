@@ -9,7 +9,8 @@
     Current count: <FluentBadge Appearance="Appearance.Neutral">@currentCount</FluentBadge>
 </div>
 
-<FluentButton Appearance="Appearance.Accent" @onclick="IncrementCount">Click me</FluentButton>
+<FluentButton IconStart="@(new Icons.Regular.Size20.Add())" Appearance="Appearance.Accent" @onclick="IncrementCount">
+    Click me</FluentButton>
 
 @code {
     private int currentCount = 0;
@@ -19,4 +20,3 @@
         currentCount++;
     }
 }
-

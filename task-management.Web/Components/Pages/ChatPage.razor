@@ -4,21 +4,26 @@
 
 <PageTitle>Chat</PageTitle>
 
-<FluentStack Orientation="Orientation.Vertical" HorizontalAlignment="HorizontalAlignment.Stretch" VerticalAlignment="VerticalAlignment.Stretch" Style="height: 100%; padding: 1rem;">
-    <FluentStack Orientation="Orientation.Horizontal" HorizontalAlignment="HorizontalAlignment.Stretch" VerticalAlignment="VerticalAlignment.Center" Style="margin-bottom: 1rem;">
+<FluentStack Orientation="Orientation.Vertical" HorizontalAlignment="HorizontalAlignment.Stretch"
+    Style="height: 100%; padding: 1rem;">
+    <FluentStack Orientation="Orientation.Horizontal" HorizontalAlignment="HorizontalAlignment.Stretch"
+        VerticalAlignment="VerticalAlignment.Center" Style="margin-bottom: 1rem;">
         <FluentTextField @bind-Value="UserMessage" Placeholder="Type a message..." Style="flex-grow: 1;" />
-        <FluentButton Icon="@(new Icons.Regular.Size24.Attach())" OnClick="AttachFile" Style="margin-left: 0.5rem;" />
-        <FluentButton Icon="@(new Icons.Regular.Size24.Call())" OnClick="StartCall" Style="margin-left: 0.5rem;" />
-        <FluentButton Icon="@(new Icons.Regular.Size24.Send())" OnClick="SendMessage" Style="margin-left: 0.5rem;" />
+        <FluentButton IconStart="@(new Icons.Regular.Size20.Attach())" OnClick="AttachFile" />
+        <FluentButton IconStart="@(new Icons.Regular.Size20.Call())" OnClick="StartCall" Style="margin-left: 0.5rem;" />
+        <FluentButton IconStart="@(new Icons.Regular.Size20.Send())" OnClick="SendMessage"
+            Style="margin-left: 0.5rem;" />
     </FluentStack>
 
-    <FluentStack Orientation="Orientation.Vertical" HorizontalAlignment="HorizontalAlignment.Stretch" VerticalAlignment="VerticalAlignment.Stretch" Style="flex-grow: 1; overflow-y: auto;">
+    <FluentStack Orientation="Orientation.Vertical" HorizontalAlignment="HorizontalAlignment.Stretch"
+        Style="flex-grow: 1; overflow-y: auto;">
         @foreach (var message in Messages)
         {
-            <FluentCard Style="margin-bottom: 0.5rem; background-color: @(message.Sender == "User" ? "#E0F7FA" : "#FFF3E0");">
-                <FluentStack Orientation="Orientation.Vertical" HorizontalAlignment="HorizontalAlignment.Stretch" VerticalAlignment="VerticalAlignment.Stretch" Style="padding: 0.5rem;">
-                    <FluentLabel Typo="Typography.Body1">@message.Text</FluentLabel>
-                    <FluentLabel Typo="Typography.Caption" Style="color: #757575;">@message.Timestamp.ToString("g")</FluentLabel>
+            <FluentCard Style="@($"margin-bottom: 0.5rem; background-color: {GetBackgroundColor}")">
+                <FluentStack Orientation="Orientation.Vertical" HorizontalAlignment="HorizontalAlignment.Stretch"
+                    Style="padding: 0.5rem;">
+                    <FluentLabel Typo="Typography.H4">@message.Text</FluentLabel>
+                    <FluentLabel Typo="Typography.H3" Style="color: #757575;">@message.Timestamp.ToString("g")</FluentLabel>
                 </FluentStack>
             </FluentCard>
         }
@@ -30,21 +35,27 @@
     }
 </FluentStack>
 
+<style>
+
+</style>
+
 @code {
     private string UserMessage { get; set; } = string.Empty;
     private List<ChatMessage> Messages { get; set; } = new List<ChatMessage>();
     private bool IsLoading { get; set; } = false;
+
+    private object GetBackgroundColor(string sender) => sender == "User" ? "#E0F7FA" : "#FFF3E0";
 
     private void SendMessage()
     {
         if (!string.IsNullOrWhiteSpace(UserMessage))
         {
             var message = new ChatMessage
-            {
-                Text = UserMessage,
-                Timestamp = DateTime.Now,
-                Sender = "User"
-            };
+                {
+                    Text = UserMessage,
+                    Timestamp = DateTime.Now,
+                    Sender = "User"
+                };
 
             Messages.Add(message);
             UserMessage = string.Empty;
@@ -54,11 +65,11 @@
             Task.Delay(2000).ContinueWith(_ =>
             {
                 var botMessage = new ChatMessage
-                {
-                    Text = "This is a bot response.",
-                    Timestamp = DateTime.Now,
-                    Sender = "Bot"
-                };
+                    {
+                        Text = "This is a bot response.",
+                        Timestamp = DateTime.Now,
+                        Sender = "Bot"
+                    };
 
                 Messages.Add(botMessage);
                 IsLoading = false;
